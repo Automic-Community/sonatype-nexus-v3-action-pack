@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.ESCAPE_ARG_VALUE">
+<HEADER state="1">
+<Title>Escape arguments</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! We escape double-quotes for java Strings
+: SET &TEMP# = STR_SUB("TEMP_OPTION_VALUE", """", "\""")
+
+! then we add double-quotes to String to preserve spaces in value
+: SET &TEMP# = STR_CAT(""" ", &TEMP#)
+: SET &TEMP# = STR_CAT(&TEMP#, " """)
+
+: SET &UC4RB_NXS_OPTION_VALUE# = &TEMP#]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[It escapes the Nexus input parameters and wrap the parameter surrounded by quotes(").
+]]></DOC>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

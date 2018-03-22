@@ -1,0 +1,14 @@
+# Package Build Configuration 
+name: PCK.AUTOMIC_NEXUS_V3
+
+source: ae
+  
+# binary object resource mapping will be defined here
+binaries:
+  
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_NEXUS_V3.PRV.STORE
+    resources: 
+      - name: NEXUSTOOL
+        type: BINARY
+        path: tools/target/nexusv3-tool.jar
+        version: 1.0.0

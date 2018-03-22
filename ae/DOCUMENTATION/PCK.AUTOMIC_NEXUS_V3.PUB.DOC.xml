@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_NEXUS_V3.PUB.DOC">
+<HEADER state="1">
+<Title>Pack Documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About Automic's NEXUS Package
+================================
+Nexus is a repository manager. It allows to the proxy, collect, and manage software dependencies and makes it easy to distribute implemented software. With this package we automate the Sonatype Nexus services for the artifact that achieve the given business goal:
+* Upload RAW Artifact
+* Upload Maven Artifact
+
+=ARA Compatibility=
+This Nexus Package also offers custom types for all the Nexus actions which further can be used in ARA.
+
+=Supported Nexus versions=
+Sonatype Nexus >= 3.9.0
+
+=Limitations=
+(none)
+
+=Setup=
+* Oracle JDK 1.7 or higher must be installed on Agent OS and "java" must be set as executable on the same.
+* The Agent should be able to access the Nexus URL(s) in order to make HTTP requests.
+* Modify the HTTP timeout parameters as per your environment. By default "CONNECTION_TIMEOUT" is defined as 30000 and "READ_TIMEOUT" is defined as 60000. Both are defined in milliseconds. 0 means no timeout.
+
+=Variables=
+PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:         HTTP timeout parameters can be configured in this variable. Values are defined in milliseconds. 0 means no timeout.
+
+=Common Inputs=
+-Nexus URL*:   Specify URL of your Nexus repository.
+-Username:      Specify your Nexus repository username. 
+-Password:       Specify your Nexus repository password.
+
+=Actions=
+Following actions are supported by Nexus.
+
+]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>
