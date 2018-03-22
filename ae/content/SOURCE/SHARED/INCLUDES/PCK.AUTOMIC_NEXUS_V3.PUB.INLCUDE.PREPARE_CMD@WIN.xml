@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_NEXUS_V3.PUB.INLCUDE.PREPARE_CMD@WIN">
+<HEADER state="1">
+<Title>Prepare command for common inputs</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! Add read action, URL and skip SSL validation  to java arguments
+: INC PCK.AUTOMIC_NEXUS_V3.PUB.INLCUDE.CHECK_JAVA@WIN
+
+: SET &UC4RB_NXS_CMD# = '-jar "&UC4RB_NXS_PATH_JAR#"'
+: SET &UC4RB_NXS_CMD# = STR_CAT(&UC4RB_NXS_CMD#, " -action &ACTION_NAME#")
+
+! Base URL
+: SET &UC4RB_ESCAPED_STRING# = &UC4RB_NXS_BASE_URL#
+: INC PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.ESCAPE_ARG_VALUE@WIN
+: SET &UC4RB_NXS_CMD# = STR_CAT(&UC4RB_NXS_CMD#, " -baseurl &UC4RB_ESCAPED_STRING#")
+
+! UserName
+: IF &UC4RB_NXS_USERNAME# <> ""
+: SET &UC4RB_ESCAPED_STRING# = &UC4RB_NXS_USERNAME#
+: INC PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.ESCAPE_ARG_VALUE@WIN
+: SET &UC4RB_NXS_CMD# = STR_CAT(&UC4RB_NXS_CMD#, " -username &UC4RB_ESCAPED_STRING#")
+: ELSE
+:   IF &UC4RB_NXS_PASSWORD# <> "--10" OR ""
+:     PRINT "The Password parameter cannot be specified without specifying the Username."
+:     STOP MSG, 50, "The Password parameter cannot be specified without specifying the Username."
+:   ENDIF
+: ENDIF
+
+! Password
+: INC PCK.ITPA_SHARED.PUB.INCLUDE.ATTACH
+: IF &UC4RB_NXS_PASSWORD# <> "--10" OR ""
+:     SET &UC4RB_ENCRYPTED_PASSWORD_TMP# = "&UC4RB_NXS_PASSWORD#"
+:     INC PCK.ITPA_SHARED.PRV.INCLUDE.DECRYPT_PASSWORD
+: ENDIF
+
+
+: SET &UC4RB_NXS_CMD# = STR_CAT(&UC4RB_NXS_CMD#, " -ssl &UC4RB_NXS_SSL_VALIDATION#")
+
+! Load package parameters
+: INC PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.LOAD_PCK_PARAMETERS@WIN]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

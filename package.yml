@@ -1,7 +1,8 @@
 # Package Build Configuration 
 name: PCK.AUTOMIC_NEXUS_V3
 
-source: ae
+APPDATA: ae/APPDATA
+source: ae/content
   
 # binary object resource mapping will be defined here
 binaries:

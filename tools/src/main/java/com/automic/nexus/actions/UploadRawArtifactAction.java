@@ -4,10 +4,8 @@ import java.io.File;
 
 import javax.ws.rs.core.MediaType;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.automic.nexus.exception.AutomicException;
+import com.automic.nexus.util.ConsoleWriter;
 import com.automic.nexus.util.validator.NexusValidator;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -22,7 +20,6 @@ import com.sun.jersey.multipart.file.FileDataBodyPart;
  */
 public class UploadRawArtifactAction extends AbstractHttpAction {
 
-	private static final Logger LOGGER = LogManager.getLogger(UploadRawArtifactAction.class);
 	private static final String RAW_REPO = "repository";
 	private static final String FILE_PATH = "filepath";
 	private static final String FILE_NAME = "filename";
@@ -34,10 +31,10 @@ public class UploadRawArtifactAction extends AbstractHttpAction {
 	private String directory;
 
 	public UploadRawArtifactAction() {
-		addOption(RAW_REPO, true, "Repository in which you want to upload artifact.");
-		addOption(FILE_PATH, true, "File you want to upload with full path.");
-		addOption(FILE_NAME, true, "Name to your file.");
-		addOption(DIR, true, "Destination directory in which file will be uploaded.");
+		addOption(RAW_REPO, true, "Repository");
+		addOption(FILE_PATH, true, "File");
+		addOption(FILE_NAME, true, "Filename");
+		addOption(DIR, true, "Directory");
 	}
 
 	/**
@@ -46,7 +43,6 @@ public class UploadRawArtifactAction extends AbstractHttpAction {
 	 * @throws AutomicException
 	 */
 	private void prepareInputParameters() throws AutomicException {
-		try {
 			String temp = getOptionValue(FILE_PATH);
 			NexusValidator.checkNotEmpty(temp, "File");
 			filePath = new File(temp);
@@ -58,14 +54,8 @@ public class UploadRawArtifactAction extends AbstractHttpAction {
 			directory = getOptionValue(DIR);
 			NexusValidator.checkNotEmpty(directory, "Directory");
 
-
 			repository = getOptionValue(RAW_REPO);
 			NexusValidator.checkNotEmpty(repository, "Repository");
-
-		} catch (AutomicException e) {
-			LOGGER.error(e.getMessage());
-			throw e;
-		}
 	}
 
 	/**
@@ -82,14 +72,8 @@ public class UploadRawArtifactAction extends AbstractHttpAction {
 
 		FormDataMultiPart part = new FormDataMultiPart();
 		part.field("raw.assetN.filename", fileName).field("raw.directory", directory).bodyPart(fp);
-
-		LOGGER.info("Calling url " + webResource.getURI());
+		 ConsoleWriter.writeln("Calling url " + webResource.getURI());
 		webResource.type(part.getMediaType()).post(ClientResponse.class, part);
-	}
-
-	@Override
-	protected Logger getLogger() {
-		return LOGGER;
 	}
 
 }

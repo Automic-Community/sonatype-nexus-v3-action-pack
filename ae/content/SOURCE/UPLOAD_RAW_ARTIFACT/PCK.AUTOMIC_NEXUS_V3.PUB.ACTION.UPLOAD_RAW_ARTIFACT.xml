@@ -58,6 +58,8 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
+<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -69,6 +71,15 @@
 <UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -125,6 +136,8 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
+<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -136,6 +149,15 @@
 <UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -192,6 +214,8 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
+<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -203,6 +227,15 @@
 <UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -246,6 +279,8 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
+<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -257,6 +292,15 @@
 <UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -339,6 +383,15 @@
 <UC4RB_NXS_FILEs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_FILE_NAMEs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_DIRECTORYs.00 altview="0" haslist="0"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" ontop="1">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" prptmode="1">
+<UC4RB_SUDO_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_USE_SUDOs.00 altview="0" haslist="0">None</UC4RB_USE_SUDOs.00>
+<UC4RB_SUDO_USERs.00 altview="0" haslist="0"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
