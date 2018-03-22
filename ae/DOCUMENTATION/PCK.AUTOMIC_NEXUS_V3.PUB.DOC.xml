@@ -37,7 +37,8 @@ PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:         HTTP timeout parameter
 
 =Actions=
 Following actions are supported by Nexus.
-
+* Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_RAW_ARTIFACT
+* Action Description: This action uploads content to nexus RAW repository.
 ]]></DOC>
 </DOCU_Docu>
 </DOCU>
