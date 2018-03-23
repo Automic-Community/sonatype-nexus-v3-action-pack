@@ -8,4 +8,4 @@ ${UserName_Nexus}    admin
 ${Password_Nexus}    admin123
 ${Respository_Name}    raw-repo
 ${Upload_Artifact}    ${EXECDIR}\\test.jar
-${Dir}            automic\\test
+${Dir}            /automic/test

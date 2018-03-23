@@ -114,3 +114,4 @@ Nexus Authentication
     Action Set    &UC4RB_NXS_BASE_URL#    ${URL_Nexus}
     Action Set    &UC4RB_NXS_USERNAME#    ${UserName_Nexus}
     Action Set    &UC4RB_NXS_PASSWORD#    ${Password_Nexus}
+    Action Set    &UC4RB_NXS_SSL_VALIDATION#    YES
