@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
-<JOBP AllowExternal="1" name="PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_RAW_ARTIFACT">
+<JOBP AllowExternal="1" name="PCK.AUTOMIC_NEXUS.PUB.ACTION.UPLOAD_MAVEN_ARTIFACT">
 <XHEADER state="1">
-<Title>Upload Raw Artifact</Title>
+<Title>Upload Maven Artifact</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -58,27 +58,24 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<UC4RB_NXS_DIRECTORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_DIRECTORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
-<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<node content="1" id="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<PRPTBOX promptset="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<UC4RB_NXS_ARTIFACT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_ARTIFACT_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_CLASSIFIERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_CLASSIFIER#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_EXTENSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_EXTENSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_PKGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_PKG#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_POMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_POM#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">No</UC4RB_NXS_GNT_POMs.00>
+<UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_PACKAGINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PACKAGING#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -100,7 +97,7 @@
 </PostCon>
 </postconditions>
 </task>
-<task Alias="UPLOAD_RAW_ARTIFACT" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_NEXUS_V3.PRV.JOB.UPLOAD_RAW_ARTIFACT@WINDOWS" ParentAlias="" ParentObject="" Row="1" Text2="">
+<task Alias="UPLOAD_MAVEN_ARTIFACT" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_NEXUS.PRV.JOB.UPLOAD_MAVEN_ARTIFACT@WINDOWS" ParentAlias="" ParentObject="" Row="1" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
 <when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
@@ -135,27 +132,24 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<UC4RB_NXS_DIRECTORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_DIRECTORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
-<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<node content="1" id="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<PRPTBOX promptset="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<UC4RB_NXS_ARTIFACT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_ARTIFACT_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_CLASSIFIERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_CLASSIFIER#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_EXTENSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_EXTENSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_PKGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_PKG#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_POMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_POM#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">No</UC4RB_NXS_GNT_POMs.00>
+<UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_PACKAGINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PACKAGING#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -177,7 +171,7 @@
 </PostCon>
 </postconditions>
 </task>
-<task Alias="UPLOAD_RAW_ARTIFACT" BranchType="0" Col="2" Lnr="3" OType="JOBS" Object="PCK.AUTOMIC_NEXUS_V3.PRV.JOB.UPLOAD_RAW_ARTIFACT@UNIX" ParentAlias="" ParentObject="" Row="3" Text2="">
+<task Alias="UPLOAD_MAVEN_ARTIFACT" BranchType="0" Col="2" Lnr="3" OType="JOBS" Object="PCK.AUTOMIC_NEXUS.PRV.JOB.UPLOAD_MAVEN_ARTIFACT@UNIX" ParentAlias="" ParentObject="" Row="3" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
 <when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
@@ -212,27 +206,24 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<UC4RB_NXS_DIRECTORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_DIRECTORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
-<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<node content="1" id="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<PRPTBOX promptset="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<UC4RB_NXS_ARTIFACT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_ARTIFACT_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_CLASSIFIERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_CLASSIFIER#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_EXTENSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_EXTENSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_PKGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_PKG#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_POMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_POM#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">No</UC4RB_NXS_GNT_POMs.00>
+<UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_PACKAGINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PACKAGING#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -276,27 +267,24 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
+<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT">
-<UC4RB_NXS_DIRECTORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_DIRECTORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
-<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<node content="1" id="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<PRPTBOX promptset="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">
+<UC4RB_NXS_ARTIFACT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_ARTIFACT_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_CLASSIFIERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_CLASSIFIER#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_EXTENSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_EXTENSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_PKGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_PKG#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_GNT_POMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GNT_POM#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT">No</UC4RB_NXS_GNT_POMs.00>
+<UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_PACKAGINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PACKAGING#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
+<UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -369,26 +357,20 @@
 <UC4RB_NXS_BASE_URLs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_USERNAMEs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SSL_VALIDATIONs.00 altview="0" haslist="0">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.UPLOAD_RAW_ARTIFACT" prptmode="1">
+<node content="1" id="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" ontop="1">
+<PRPTBOX promptset="PCK.AUTOMIC_NEXUS.PRV.PROMPTSET.UPLOAD_MAVEN_ARTIFACT" prptmode="1">
 <UC4RB_NXS_REPOSITORYs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_FILEs.00 altview="0" haslist="0"/>
-<UC4RB_NXS_FILE_NAMEs.00 altview="0" haslist="0"/>
-<UC4RB_NXS_DIRECTORYs.00 altview="0" haslist="0"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
-<node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" ontop="1">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" prptmode="1">
-<UC4RB_SUDO_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_SUDO_PASSWORDs.00>
-<UC4RB_USE_SUDOs.00 altview="0" haslist="0">None</UC4RB_USE_SUDOs.00>
-<UC4RB_SUDO_USERs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_CLASSIFIERs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_EXTENSIONs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_GROUP_IDs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_ARTIFACT_IDs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_VERSIONs.00 altview="0" haslist="0"/>
+<UC4RB_NXS_GNT_POMs.00 altview="0" haslist="0">No</UC4RB_NXS_GNT_POMs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -422,47 +404,7 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[= Action name =
-PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_RAW_ARTIFACT
-
-= General description =
-This action is used to upload the artifact to Nexus raw repository. A user can upload the artifact using the login credentials (login and password) or can upload anonymously if the user has the rights to upload. As this is an asynchronous operation, the user needs to cross check if the artifact has been uploaded. The deployment of an artifact depends on the rights that have been permitted to the user for the Nexus repository. If the access setting for the repository is set to "disable redeploy", then the user cannot deploy the same artifact again. If the access setting is set to "read-only", then the user cannot upload any artifact to the repository.
-
-Note:
-* Upload Raw Artifact Actions require Nexus >= 3.9.0
-
-= Failure Conditions =
-* Wrong connection details like username, password or Nexus URL
-* If invalid repository name is provided.
-* If file path does not exist.
-
-= Inputs =
-- Repository Name*:        			    Provide the name of the repository in which you want to upload artifact. E.g. raw-repo
-- File*:                                                         Provide file you want to upload with full path. E.g. C:\commons-io-2.0.1.jar	
-- File Name:                                                Provide the name to your file. E.g. commons-io-2.0.1
-- Directory*:                                                 Provide destination directory in which file will be uploaded. E.g. commons
-
-= Behavior =
-* If the user does not provide the filename, action will fetch the filename from File path provided.
-
-=Return Value=
-(none)
-
-= Outputs =
-* Return code is 0 in case of success.
-* Return code is non-zero in case of failure.
-
-= Rollback =
-(none)
-
-= Logging =
-AE logs will be displayed in the AE report.
-
-= Example =
-- Repository Name*:        			   raw-repo
-- File*:                                                        C:\commons-io-2.0.1.jar	
-- File Name:                                               commons-io-2.0.1
-- Directory*:                                                commons]]></DOC>
+<DOC/>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

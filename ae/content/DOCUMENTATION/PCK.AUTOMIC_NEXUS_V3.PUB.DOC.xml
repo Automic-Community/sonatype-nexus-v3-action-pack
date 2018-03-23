@@ -10,7 +10,7 @@
 <DOC><![CDATA[About Automic's NEXUS Package
 ================================
 Nexus is a repository manager. It allows to the proxy, collect, and manage software dependencies and makes it easy to distribute implemented software. With this package we automate the Sonatype Nexus services for the artifact that achieve the given business goal:
-* Upload RAW Artifact
+* Upload Raw Artifact
 * Upload Maven Artifact
 
 =ARA Compatibility=
@@ -38,7 +38,10 @@ PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:         HTTP timeout parameter
 =Actions=
 Following actions are supported by Nexus.
 * Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_RAW_ARTIFACT
-* Action Description: This action uploads content to nexus RAW repository.
+* Action Description: This action uploads content to nexus Raw repository.
+
+* Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_MAVEN_ARTIFACT
+* Action Description: This action uploads content to nexus Maven repository.
 ]]></DOC>
 </DOCU_Docu>
 </DOCU>
