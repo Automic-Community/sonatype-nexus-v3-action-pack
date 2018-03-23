@@ -6,7 +6,6 @@ import javax.ws.rs.core.MediaType;
 
 import com.automic.nexus.exception.AutomicException;
 import com.automic.nexus.util.CommonUtil;
-import com.automic.nexus.util.ConsoleWriter;
 import com.automic.nexus.util.validator.NexusValidator;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -30,7 +29,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
 	private static final String MVN_EXTENSION = "extension";
 	private static final String FILE = "filepath";
 	private static final String GEN_POM = "generatepom";
-	private static final String GENERATE_POM = "generatepom";
+	private static final String GENERATE_POM = "Generate POM";
 	
     private String groupID;
     private String artifactID;
@@ -111,7 +110,6 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
 			part.field("maven2.asset1.classifier", classifier);
 		}
 		part.bodyPart(fp);
-		ConsoleWriter.writeln(" aaaaa  "+webResource.getProperties());
         webResource.type(part.getMediaType()).post(ClientResponse.class, part);
         
     }
