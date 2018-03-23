@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.automic.nexus.constants.Constants;
 import com.automic.nexus.constants.ExceptionConstants;
 import com.automic.nexus.exception.AutomicException;
@@ -18,8 +15,6 @@ import com.automic.nexus.exception.AutomicException;
  *
  */
 public class ByteWriter {
-
-    private static final Logger LOGGER = LogManager.getLogger(ByteWriter.class);
 
     private BufferedOutputStream bos = null;
 
@@ -56,7 +51,7 @@ public class ByteWriter {
         try {
             bos.write(bytes, offset, length);
         } catch (IOException e) {
-            LOGGER.error(ExceptionConstants.UNABLE_TO_WRITEFILE, e);
+        	ConsoleWriter.writeln(e);
             throw new AutomicException(ExceptionConstants.UNABLE_TO_WRITEFILE, e);
         }
     }
@@ -90,12 +85,12 @@ public class ByteWriter {
             if (bos != null) {
                 bos.close();
             } else {
-                LOGGER.error("Stream null!! Unable to close stream");
+            	ConsoleWriter.writeln("Stream null!! Unable to close stream");
                 throw new AutomicException(ExceptionConstants.UNABLE_TO_CLOSE_STREAM);
             }
 
         } catch (IOException e) {
-            LOGGER.error(ExceptionConstants.UNABLE_TO_CLOSE_STREAM, e);
+        	ConsoleWriter.writeln(e);
             throw new AutomicException(ExceptionConstants.UNABLE_TO_CLOSE_STREAM, e);
         }
     }
@@ -110,7 +105,7 @@ public class ByteWriter {
             try {
                 bos.flush();
             } catch (IOException e) {
-                LOGGER.error(ExceptionConstants.UNABLE_TO_FLUSH_STREAM, e);
+            	ConsoleWriter.writeln(e);
                 throw new AutomicException(ExceptionConstants.UNABLE_TO_FLUSH_STREAM, e);
             }
         }

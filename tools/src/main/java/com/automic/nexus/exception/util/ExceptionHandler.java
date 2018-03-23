@@ -1,9 +1,5 @@
 package com.automic.nexus.exception.util;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.automic.nexus.constants.ExceptionConstants;
 import com.automic.nexus.exception.AutomicException;
 import com.automic.nexus.exception.AutomicRuntimeException;
 import com.automic.nexus.util.CommonUtil;
@@ -15,8 +11,6 @@ import com.automic.nexus.util.ConsoleWriter;
  */
 
 public final class ExceptionHandler {
-
-    private static final Logger LOGGER = LogManager.getLogger(ExceptionHandler.class);
 
     private static final int RESPONSE_NOT_OK = 1;
     private static final int RESPONSE_CONNECT_TIMEOUT = 2;
@@ -43,7 +37,7 @@ public final class ExceptionHandler {
         if (th instanceof AutomicException || th instanceof AutomicRuntimeException) {
             errorMsg = th.getMessage();
         } else {
-            LOGGER.error(ExceptionConstants.GENERIC_ERROR_MSG, ex);
+        	ConsoleWriter.writeln(ex);
             errorMsg = th.getMessage();
             if (th instanceof java.net.ConnectException || th instanceof java.net.UnknownHostException) {
                 errorMsg = UNABLE_TO_CONNECT;

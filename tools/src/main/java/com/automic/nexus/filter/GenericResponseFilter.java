@@ -1,8 +1,5 @@
 package com.automic.nexus.filter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.automic.nexus.exception.AutomicRuntimeException;
 import com.automic.nexus.util.CommonUtil;
 import com.automic.nexus.util.ConsoleWriter;
@@ -19,8 +16,6 @@ public class GenericResponseFilter extends ClientFilter {
 
     private static final int HTTP_SUCCESS_START = 200;
     private static final int HTTP_SUCCESS_END = 299;
-
-    private static final Logger LOGGER = LogManager.getLogger(GenericResponseFilter.class);
 
     private static final String RESPONSE_CODE = "Response Code [%s]";
     private static final String RESPONSE_MSG = RESPONSE_CODE + " Message : [%s]";
@@ -39,10 +34,9 @@ public class GenericResponseFilter extends ClientFilter {
         }
         if (!(response.getStatus() >= HTTP_SUCCESS_START && response.getStatus() <= HTTP_SUCCESS_END)) {
             ConsoleWriter.writeln(CommonUtil.formatErrorMessage(msg));
-            LOGGER.error(msg);
             String responseMsg = response.getEntity(String.class);
             if (CommonUtil.checkNotEmpty(responseMsg)) {
-                LOGGER.error(responseMsg);
+            	ConsoleWriter.writeln(responseMsg);
             }
             throw new AutomicRuntimeException(responseMsg);
 

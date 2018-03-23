@@ -2,9 +2,6 @@ package com.automic.nexus.util;
 
 import java.io.OutputStream;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.automic.nexus.exception.AutomicException;
 
 /**
@@ -15,7 +12,6 @@ import com.automic.nexus.exception.AutomicException;
  */
 public final class ConsoleWriter {
 
-    private static final Logger LOGGER = LogManager.getLogger(ConsoleWriter.class);
     private static final ByteWriter WRITER = new ByteWriter(System.out);
 
     private ConsoleWriter() {
@@ -31,7 +27,7 @@ public final class ConsoleWriter {
         try {
             WRITER.write(temp);
         } catch (AutomicException ae) {
-            LOGGER.error(ae.getMessage());
+            ConsoleWriter.writeln(ae.getMessage());
         }
     }
 
@@ -66,7 +62,7 @@ public final class ConsoleWriter {
         try {
             WRITER.flush();
         } catch (AutomicException ae) {
-            LOGGER.error(ae.getMessage());
+        	ConsoleWriter.writeln(ae.getMessage());
         }
     }
 

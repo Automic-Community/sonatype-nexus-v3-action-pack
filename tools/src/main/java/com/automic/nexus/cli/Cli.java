@@ -9,19 +9,16 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.automic.nexus.constants.ExceptionConstants;
 import com.automic.nexus.exception.AutomicException;
+import com.automic.nexus.util.ConsoleWriter;
 
 /**
  * This class is used to parse the arguments against provided options using apache cli library. Further this class
  * provides method to retrieve the argument value.
  */
 public class Cli {
-
-    private static final Logger LOGGER = LogManager.getLogger(Cli.class);
 
     private CommandLine cmd = null;
 
@@ -30,9 +27,10 @@ public class Cli {
             CommandLineParser parser = new DefaultParser();
             cmd = parser.parse(options.getOptions(), args, true);
         } catch (ParseException e) {
-            LOGGER.error("Error parsing the command line options", e);
+            ConsoleWriter.writeln(e);
+            ConsoleWriter.writeln("Error parsing the command line options");
             printHelp(options.getOptions());
-            throw new AutomicException(String.format(ExceptionConstants.INVALID_ARGS, e));
+            throw new AutomicException(String.format(ExceptionConstants.INVALID_ARGS, e.getMessage()));
         }
     }
 
@@ -41,18 +39,20 @@ public class Cli {
         return (value != null ? value.trim() : value);
     }
 
-    public void log(List<String> ignoreOptions) {
-        LOGGER.info("Input params ");
+    public void log(List<String> ignoreOptions) throws AutomicException {
+        ConsoleWriter.newLine();
+        ConsoleWriter.writeln("******     Input Parameters     ******");
+        ConsoleWriter.newLine();
         for (Option o : cmd.getOptions()) {
             if (!ignoreOptions.contains(o.getOpt())) {
-                LOGGER.info(o.getDescription() + "[" + o.getOpt() + "]" + " = " + o.getValue());
+                ConsoleWriter.writeln("Parameter [" + o.getDescription() + "] = " + o.getValue());
             }
         }
+        ConsoleWriter.newLine();
     }
 
     private void printHelp(Options options) {
         HelpFormatter formater = new HelpFormatter();
         formater.printHelp("Usage ", options);
     }
-
 }

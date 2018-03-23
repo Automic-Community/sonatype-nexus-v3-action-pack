@@ -7,6 +7,7 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
 import com.automic.nexus.constants.Constants;
+import com.automic.nexus.util.ConsoleWriter;
 
 /**
  * @author sumitsamson
@@ -14,7 +15,7 @@ import com.automic.nexus.constants.Constants;
  */
 
 /**
- * This class is used to instantiate the Options for OpenStack.This class only initializes the action and help
+ * This class is used to instantiate the Options for Nexus.This class only initializes the action and help
  * options.Further action specific options should be added to the same object (i.e CliOptions object) instantiated by
  * this class
  */

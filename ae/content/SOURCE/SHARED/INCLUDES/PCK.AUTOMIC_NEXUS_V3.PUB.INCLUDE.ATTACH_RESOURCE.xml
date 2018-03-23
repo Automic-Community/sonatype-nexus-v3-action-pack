@@ -7,10 +7,10 @@
 <OH_SubType/>
 </HEADER>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[:ATTACH_RES "PCK.AUTOMIC_NEXUS.PRV.STORE" ,"NEXUSTOOL", C, N
+<MSCRI><![CDATA[:ATTACH_RES "PCK.AUTOMIC_NEXUS_V3.PRV.STORE" ,"NEXUSTOOL", C, N
 
 ! Setting jar class path into variable
-:SET &UC4RB_NXS_PATH_JAR#= STR_CAT(&$AGENT_RESOURCES_CLIENT#,"nexus-tool.jar")]]></MSCRI>
+:SET &UC4RB_NXS_PATH_JAR#= STR_CAT(&$AGENT_RESOURCES_CLIENT#,"nexusv3-tool.jar")]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[This includes attaches the nexus jar to current agent

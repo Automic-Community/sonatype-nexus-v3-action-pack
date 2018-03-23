@@ -1,5 +1,7 @@
 package com.automic.nexus.util;
 
+import com.automic.nexus.constants.Constants;
+
 /**
  * Common Utility class contains basic function(s) required by Nexus actions.
  *
@@ -62,4 +64,43 @@ public final class CommonUtil {
         return field != null;
     }
 
+    /**
+    *
+    * Method to read the value as defined in environment. If value is not valid integer, then it returns the default
+    * value as specified.
+    *
+    * @param paramName
+    * @param defaultValue
+    * @return parameter value
+    */
+   public static final int getEnvParameter(final String paramName, int defaultValue) {
+       String val = System.getenv(paramName);
+       int i;
+       if (val != null) {
+           try {
+               i = Integer.parseInt(val);
+           } catch (final NumberFormatException nfe) {
+               i = defaultValue;
+           }
+       } else {
+           i = defaultValue;
+       }
+       return i;
+   }
+
+   /**
+    * Method to convert YES/NO values to boolean true or false
+    * 
+    * @param value
+    * @return true if YES, 1
+    */
+   public static final boolean convert2Bool(String value) {
+       boolean ret = false;
+       if (checkNotEmpty(value)) {
+           ret = Constants.YES.equalsIgnoreCase(value) || Constants.TRUE.equalsIgnoreCase(value)
+                   || Constants.ONE.equalsIgnoreCase(value);
+       }
+       return ret;
+   }
 }
+
