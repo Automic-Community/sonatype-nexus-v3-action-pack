@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          ../../../Env/default.txt
+
+*** Variables ***
+#---- Promptset Fields --------------------------------------------------------------------------------------
+${URL_Nexus}      http://10.243.44.110:8081
+${UserName_Nexus}    admin
+${Password_Nexus}    admin123
+${Respository_Name}    raw-repo
+${Upload_Artifact}    ${EXECDIR}\\test.jar
+${Dir}            automic\\test
