@@ -1,5 +1,7 @@
 package com.automic.nexus.util;
 
+import com.automic.nexus.constants.Constants;
+
 /**
  * Common Utility class contains basic function(s) required by Nexus actions.
  *
@@ -86,5 +88,19 @@ public final class CommonUtil {
        return i;
    }
 
+   /**
+    * Method to convert YES/NO values to boolean true or false
+    * 
+    * @param value
+    * @return true if YES, 1
+    */
+   public static final boolean convert2Bool(String value) {
+       boolean ret = false;
+       if (checkNotEmpty(value)) {
+           ret = Constants.YES.equalsIgnoreCase(value) || Constants.TRUE.equalsIgnoreCase(value)
+                   || Constants.ONE.equalsIgnoreCase(value);
+       }
+       return ret;
+   }
 }
 

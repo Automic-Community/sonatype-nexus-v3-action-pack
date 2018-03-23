@@ -58,7 +58,6 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
@@ -136,7 +135,6 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
@@ -214,7 +212,6 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>
@@ -279,7 +276,6 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 <UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10</UC4RB_NXS_PASSWORDs.00>
-<UC4RB_NXS_SKIP_SSLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SKIP_SSL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SKIP_SSLs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION"/>
 </PRPTBOX>

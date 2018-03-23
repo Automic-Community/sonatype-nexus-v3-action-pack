@@ -42,5 +42,27 @@ public final class NexusValidator {
                     filePath));
         }
     }
+    
+    /**
+     * This method validate Parameter Name for provided RegEx
+     * 
+     * @param parameterName
+     *            {@code String} object
+     * @param value
+     *            {@code String} object
+     * @param regEx
+     *            {@code String} object
+     * @param message
+     *            {@code String} object
+     * @throws AutomicException
+     *             Invalid value for parameter
+     */
+    public static final void matchingPattern(String parameterName, String value, String regEx, String message)
+            throws AutomicException {
+        if (!CommonUtil.checkNotEmpty(value) || !value.matches(regEx)) {
+            throw new AutomicException(String.format(ExceptionConstants.INVALID_INPUT_PARAMETER_PATTERN, parameterName,
+                    value, message));
+        }
+    }
 
 }

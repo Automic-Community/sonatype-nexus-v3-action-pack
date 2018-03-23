@@ -30,6 +30,11 @@ public final class Constants {
     public static final String SKIP_CERT_VALIDATION = "ssl";
     public static final String HTTPS = "https";
 
+    public static final String YES = "YES";
+    public static final String NO = "NO";
+    public static final String TRUE = "TRUE";
+    public static final String ONE = "1";
+    
     private Constants() {
     }
 

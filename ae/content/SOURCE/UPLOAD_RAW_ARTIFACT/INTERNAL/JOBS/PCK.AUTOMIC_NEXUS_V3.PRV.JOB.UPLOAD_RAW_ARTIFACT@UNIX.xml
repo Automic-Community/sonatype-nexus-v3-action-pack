@@ -162,7 +162,8 @@
 
 !------------------------------------------ Error Handling -----------------------------------------------------------------------------------------------------
 
-:INC PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.CHECK_JOBSTATUS@UNIX]]></MSCRI>
+:INC PCK.AUTOMIC_NEXUS_V3.PUB.INCLUDE.CHECK_JOBSTATUS@UNIX
+:INC PCK.ITPA_SHARED.PUB.INCLUDE.SUDOERS_FOOTER]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">
 <Inherit>N</Inherit>
