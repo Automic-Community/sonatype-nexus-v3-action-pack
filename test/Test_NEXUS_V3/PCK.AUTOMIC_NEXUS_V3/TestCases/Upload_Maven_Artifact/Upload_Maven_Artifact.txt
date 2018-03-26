@@ -1,0 +1,93 @@
+*** Settings ***
+Suite Setup       Startup
+Suite Teardown    Teardown
+Force Tags        upload_maven_artifact
+Test Template     Upload Maven Artifact Template
+Library           com.automic.robot.itpa.ItpaLibrary
+Library           String
+Library           DateTime
+Resource          ../../Resources/messages.txt
+Resource          ../../Resources/keywords.txt
+Resource          ../../Resources/variables.txt
+Resource          ../../Resources/actions.txt
+
+*** Test Cases ***    OK_NOK    RespositoryName              File                   Classifier             Extension             GroupId        ArtifactId        Version                GeneratePOM    Packaging
+Upload Maven Artifact while providing all the fields
+                      [Tags]    main_scenarios
+                      OK        ${Maven_Respository_Name}    ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Upload Maven Artifact while asserting all the optional fields
+                      OK        ${Maven_Respository_Name}    ${Upload_Artifact}     ${EMPTY}               ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    NO             ${EMPTY}
+
+Upload Maven Artifact while providing Packaging but Generate POM set as No
+                      OK        ${Maven_Respository_Name}    ${Upload_Artifact}     ${EMPTY}               ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    NO             zip
+
+Upload Maven Artifact with Non-Existing Repository
+                      NOK       Invalid                      ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Upload Maven Artifact with Non-Existing Path
+                      NOK       ${Maven_Respository_Name}    Invalid                ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Upload Maven Artifact with Non-Existing File
+                      NOK       ${Maven_Respository_Name}    ${EXECDIR}\\abc.jar    ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Upload Maven Artifact while providing directory only for File Input
+                      NOK       ${Maven_Respository_Name}    ${EXECDIR}             ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Assert Repository Name as Mandatory Field
+                      NOK       ${EMPTY}                     ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Assert File as Mandatory Field
+                      NOK       ${Maven_Respository_Name}    ${EMPTY}               ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Assert Extension as Mandatory Field
+                      NOK       ${Maven_Respository_Name}    ${Upload_Artifact}     ${Maven_Classifier}    ${EMPTY}              ${Group_ID}    ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Assert Group ID as Mandatory Field
+                      NOK       ${Maven_Respository_Name}    ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${EMPTY}       ${Artifact_ID}    ${Artifact_Version}    YES            zip
+
+Assert Artifact ID as Mandatory Field
+                      NOK       ${Maven_Respository_Name}    ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${EMPTY}          ${Artifact_Version}    YES            zip
+
+Assert Version as Mandatory Field
+                      NOK       ${Maven_Respository_Name}    ${Upload_Artifact}     ${Maven_Classifier}    ${Maven_Extension}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}               YES            zip
+
+*** Keywords ***
+Startup
+    Log    *******Start Test "UPLOAD MAVEN ARTIFACT"*******
+    Log    *******Connect to AE*******
+    Connect AE
+
+Upload Maven Artifact Template
+    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${File}    ${Classifier}    ${Extension}    ${GroupID}
+    ...    ${ArtifactID}    ${Version}    ${GeneratePOM}    ${Packaging}
+    [Documentation]    This test uploads a maven artifact on Nexus repository
+    ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
+    ...    -${RespositoryName}: This field specifies name of the repository in which you want to upload artifact
+    ...    -${File}: This field specifies file you want to upload with full path.
+    ...    -${Classifier}: This field specifies classifier to artifact.
+    ...    -${Extension}: This field specifies extension of the artifact.
+    ...    -${GroupID}: This field specifies group id of the artifact.
+    ...    -${ArtifactID}: This field specifies the artifact id of the artifact.
+    ...    -${Version}: This field specifies artifact version.
+    ...    -${GeneratePOM}: If Yes, Generate a POM.
+    ...    -${Packaging}: This field specifies packaging details of the POM.
+    Generate String
+    Init Action    ${_UPLOAD_MAVEN_ARTIFACT_ACTION}
+    Nexus Authentication
+    Run Keyword If    '${RespositoryName}' == 'Invalid'    Action Set    &UC4RB_NXS_REPOSITORY#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_REPOSITORY#    ${RespositoryName}
+    Run Keyword If    '${File}' == 'Invalid'    Action Set    &UC4RB_NXS_FILE#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_FILE#    ${File}
+    Action Set    &UC4RB_NXS_CLASSIFIER#    ${Classifier}
+    Action Set    &UC4RB_NXS_EXTENSION#    ${Extension}
+    Action Set    &UC4RB_NXS_GROUP_ID#    ${GroupID}
+    Action Set    &UC4RB_NXS_ARTIFACT_ID#    ${ArtifactID}
+    Action Set    &UC4RB_NXS_VERSION#    ${Version}
+    Action Set    &UC4RB_NXS_GNT_POM#    ${GeneratePOM}
+    Action Set    &UC4RB_NXS_GNT_PKG#    ${Packaging}
+    Action Execute
+    Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
+
+Teardown
+    Log    *******End Test "UPLOAD MAVEN ARTIFACT"*******
