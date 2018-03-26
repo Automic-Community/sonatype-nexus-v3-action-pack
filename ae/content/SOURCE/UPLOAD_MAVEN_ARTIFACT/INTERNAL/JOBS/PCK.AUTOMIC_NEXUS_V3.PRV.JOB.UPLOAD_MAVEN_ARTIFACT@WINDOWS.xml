@@ -174,7 +174,7 @@
 : PRINT &UC4RB_NXS_CMD#
 
 ! Invoking java binary
-"%JAVA%" &UC4RB_NXS_CMD#
+&UC4RB_NXS_CMD#
 
 !----------------------------------------- Status messages -----------------------------------------------------------------------------------------
 :SET &UC4RB_LOGGING_INFO# = "******** UPLOAD MAVEN ARTIFACT ACTION EXECUTED SUCCESSFULLY ********"
