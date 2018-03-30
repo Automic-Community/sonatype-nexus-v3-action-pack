@@ -13,7 +13,7 @@ import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.multipart.file.FileDataBodyPart;
 
 /**
- * This action is used to upload an artifact to Nexus RAW repository.
+ * This action is used to upload an artifact to Nexus MAVEN repository.
  * 
  * @author yogitadalal
  *
