@@ -17,43 +17,52 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 /**
- * This action is used to retrieve an artifact to Nexus RAW repository.
+ * This action is used to upload an artifact to Nexus RAW repository.
  * 
  * @author Karanvir Attli
  *
  */
 
-public class RetrieveRawArtifactAction extends AbstractHttpAction {
+public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 
 	private static final String RAW_REPO = "repository";
-	private static final String GROUP = "group";
-	private static final String NAME = "name";
-	private static final String VERSION = "version";
+	private static final String GROUP = "groupID";
+	private static final String ARTIFACT_ID = "artifactid";
+	private static final String BASE_VERSION = "baseversion";
 	private static final String SHA1 = "sha1";
 	private static final String MD5 = "md5";
 	private static final String TARGET_FOLDER = "target";
 	private static final String FILE_NAME = "filename";
+	private static final String CLASSIFIER = "classifier";
+	private static final String EXTENSION = "extension";
+	
+	
+	
 
 	private String repository;
 	private String group;
-	private String name;
-	private String version;
+	private String artifactid;
+	private String baseversion;
 	private String sha1;
 	private String md5;
 	private String targetFolder;
 	private String fileName;
+	private String classifier;
+	private String extension;
 
 
 
-	public RetrieveRawArtifactAction() {
+	public RetrieveMavenArtifactAction() {
 		addOption(RAW_REPO, true, "Repository");
 		addOption(GROUP, false, "Group name");
-		addOption(NAME, false, "Name of the component");
-		addOption(VERSION, false, "Version");
+		addOption(ARTIFACT_ID, false, "artifact id of the component");
+		addOption(BASE_VERSION, false, "Base Version");
 		addOption(SHA1, false, "SHA 1");
 		addOption(MD5, false, "MD5");
 		addOption(TARGET_FOLDER, false, "Target Folder");
 		addOption(FILE_NAME, true, "Name of the file");
+		addOption(CLASSIFIER, false, "classifier");
+		addOption(EXTENSION, false, "extension");
 	}
 
 	/**
@@ -67,11 +76,15 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 		NexusValidator.checkNotEmpty(repository, "Repository");
 
 		group = getOptionValue(GROUP);
-		name = getOptionValue(NAME);
-		version = getOptionValue(VERSION);
+		artifactid = getOptionValue(ARTIFACT_ID);
+		baseversion = getOptionValue(BASE_VERSION);
 		sha1 = getOptionValue(SHA1);
 		md5 = getOptionValue(MD5);
 		targetFolder = getOptionValue(TARGET_FOLDER);
+		
+		classifier = getOptionValue(CLASSIFIER);
+		extension = getOptionValue(EXTENSION);
+		
 		fileName = getOptionValue(FILE_NAME);
 		NexusValidator.checkNotEmpty(fileName, "File Name");
 
@@ -92,13 +105,13 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 				.path("download").queryParam("repository", repository);
 
 		if (CommonUtil.checkNotEmpty(group)) {
-			webResource = webResource.queryParam("group", group);
+			webResource = webResource.queryParam("maven.groupId", group);
 		}
-		if (CommonUtil.checkNotEmpty(name)) {
-			webResource = webResource.queryParam("name", name);
+		if (CommonUtil.checkNotEmpty(artifactid)) {
+			webResource = webResource.queryParam("maven.artifactId", artifactid);
 		}
-		if (CommonUtil.checkNotEmpty(version)) {
-			webResource = webResource.queryParam("version", version);
+		if (CommonUtil.checkNotEmpty(baseversion)) {
+			webResource = webResource.queryParam("maven.baseVersion", baseversion);
 		}
 
 		if (CommonUtil.checkNotEmpty(md5)) {
@@ -109,6 +122,16 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 			webResource = webResource.queryParam("sha1", sha1);
 		}
 
+		if (CommonUtil.checkNotEmpty(extension)) {
+			webResource = webResource.queryParam("maven.extension", extension);
+		}
+		
+		if (CommonUtil.checkNotEmpty(classifier)) {
+			webResource = webResource.queryParam("maven.classifier", classifier);
+		}
+		
+		
+		
 		ConsoleWriter.writeln("Calling url " + webResource.getURI());
 
 		response = webResource.get(ClientResponse.class);
