@@ -17,3 +17,11 @@ ${Maven_Extension}    jar
 ${Group_ID}       com.automic
 ${Artifact_ID}    artifactory
 ${Artifact_Version}    1.0.0
+#----Retrieve Raw Artifact-----------------------------------------------------------------------------------
+${Group}          /actions
+${Version}        1.1.2
+${Name}           actions/actions-jar
+${SHA1}           0ec38c57a78940bf5f8f5971307ca89406849647
+${MD5}            fadfe3e2cdcf7c9c41d969f014ee6aa0
+${Target_Folder}    C:\\Myfile
+${File_Name}      MydownoadedFile.zip
