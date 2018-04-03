@@ -29,34 +29,26 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	private static final String GROUP = "groupID";
 	private static final String ARTIFACT_ID = "artifactid";
 	private static final String BASE_VERSION = "baseversion";
-	private static final String SHA1 = "sha1";
-	private static final String MD5 = "md5";
 	private static final String TARGET_FOLDER = "target";
 	private static final String FILE_NAME = "filename";
 	private static final String CLASSIFIER = "classifier";
 	private static final String EXTENSION = "extension";
-	
+
 	private String repository;
 	private String groupid;
 	private String artifactid;
 	private String baseversion;
-	private String filesha1;
-	private String filemd5;
 	private String targetFolder;
 	private String fileName;
 	private String fileclassifier;
 	private String fileExtension;
 
-
-
 	public RetrieveMavenArtifactAction() {
 		addOption(RAW_REPO, true, "Repository Name");
-		addOption(GROUP, false, "Group ID");
-		addOption(ARTIFACT_ID, false, "Artifact ID");
-		addOption(BASE_VERSION, false, "Base Version");
-		addOption(SHA1, false, "SHA 1");
-		addOption(MD5, false, "MD5");
-		addOption(TARGET_FOLDER, false, "Target Folder");
+		addOption(GROUP, true, "Group ID");
+		addOption(ARTIFACT_ID, true, "Artifact ID");
+		addOption(BASE_VERSION, true, "Base Version");
+		addOption(TARGET_FOLDER, true, "Target Folder");
 		addOption(FILE_NAME, true, "File Name");
 		addOption(CLASSIFIER, false, "classifier");
 		addOption(EXTENSION, false, "extension");
@@ -68,15 +60,16 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	 * @throws AutomicException
 	 */
 	private void prepareInputParameters() throws AutomicException {
-
 		repository = getOptionValue(RAW_REPO);
 		NexusValidator.checkNotEmpty(repository, "Repository");
 		groupid = getOptionValue(GROUP);
+		NexusValidator.checkNotEmpty(groupid, "Group ID");
 		artifactid = getOptionValue(ARTIFACT_ID);
+		NexusValidator.checkNotEmpty(artifactid, "Artifact ID");
 		baseversion = getOptionValue(BASE_VERSION);
-		filesha1 = getOptionValue(SHA1);
-		filemd5 = getOptionValue(MD5);
+		NexusValidator.checkNotEmpty(baseversion, "Base Version");
 		targetFolder = getOptionValue(TARGET_FOLDER);
+		NexusValidator.checkNotEmpty(targetFolder, "Target Folder");
 		fileclassifier = getOptionValue(CLASSIFIER);
 		fileExtension = getOptionValue(EXTENSION);
 		fileName = getOptionValue(FILE_NAME);
@@ -85,7 +78,7 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	}
 
 	/**
-	 * Execute Upload RAW artifact action.
+	 * Execute Retrieve MAVEN artifact action.
 	 * 
 	 * @throws AutomicException
 	 */
@@ -96,34 +89,17 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		ClientResponse response = null;
 
 		webResource = webResource.path("service").path("rest").path("beta").path("search").path("assets")
-				.path("download").queryParam("repository", repository);
-
-		if (CommonUtil.checkNotEmpty(groupid)) {
-			webResource = webResource.queryParam("maven.groupId", groupid);
-		}
-		if (CommonUtil.checkNotEmpty(artifactid)) {
-			webResource = webResource.queryParam("maven.artifactId", artifactid);
-		}
-		if (CommonUtil.checkNotEmpty(baseversion)) {
-			webResource = webResource.queryParam("maven.baseVersion", baseversion);
-		}
-
-		if (CommonUtil.checkNotEmpty(filemd5)) {
-			webResource = webResource.queryParam("md5", filemd5);
-		}
-
-		if (CommonUtil.checkNotEmpty(filesha1)) {
-			webResource = webResource.queryParam("sha1", filesha1);
-		}
+				.path("download").queryParam("repository", repository).queryParam("maven.groupId", groupid)
+				.queryParam("maven.artifactId", artifactid).queryParam("maven.baseVersion", baseversion);
 
 		if (CommonUtil.checkNotEmpty(fileExtension)) {
 			webResource = webResource.queryParam("maven.extension", fileExtension);
 		}
-		
+
 		if (CommonUtil.checkNotEmpty(fileclassifier)) {
 			webResource = webResource.queryParam("maven.classifier", fileclassifier);
 		}
-		
+
 		ConsoleWriter.writeln("Calling url " + webResource.getURI());
 		response = webResource.get(ClientResponse.class);
 		prepareOutput(response);
