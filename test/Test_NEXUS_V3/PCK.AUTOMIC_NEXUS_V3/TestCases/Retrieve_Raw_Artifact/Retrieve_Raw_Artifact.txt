@@ -1,0 +1,102 @@
+*** Settings ***
+Suite Setup       Startup
+Suite Teardown    Teardown
+Force Tags        retrieve_raw_artifact
+Test Template     Retrieve Raw Artifact Template
+Library           com.automic.robot.itpa.ItpaLibrary
+Library           String
+Library           DateTime
+Resource          ../../Resources/messages.txt
+Resource          ../../Resources/keywords.txt
+Resource          ../../Resources/variables.txt
+Resource          ../../Resources/actions.txt
+
+*** Test Cases ***    OK_NOK    RespositoryName        Group       Version       Name        SHA1        MD5         TargetFolder       FileName
+Retrieve Raw Artifact while providing all the fields
+                      [Tags]    main_scenarios
+                      OK        ${Respository_Name}    ${Group}    ${EMPTY}      ${Name}     ${EMPTY}    ${EMPTY}    ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact while providing all the fields and File name already exist.
+                      OK        ${Respository_Name}    ${Group}    ${EMPTY}      ${Name}     ${EMPTY}    ${EMPTY}    ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with file name having no extensio
+                      OK        ${Respository_Name}    ${Group}    ${EMPTY}      ${Name}     ${EMPTY}    ${EMPTY}    ${TargetFolder}    MyFile
+
+Retrieve Raw Artifact with providing no refine search and returning multiple assets.
+                      NOK       ${Respository_Name}    ${EMPTY}    ${EMPTY}      ${EMPTY}    ${EMPTY}    ${EMPTY}    ${EMPTY}           ${FileName}
+
+Retrieve Raw Artifact with Non-Existing Repository
+                      NOK       Invalid                ${Group}    ${Version}    ${Name}     ${SHA1}     ${MD5}      ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Non-Existing Group
+                      NOK       ${Respository_Name}    Invalid     ${Version}    ${Name}     ${SHA1}     ${MD5}      ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Non-Existing Version
+                      NOK       ${Respository_Name}    ${Group}    Invalid       ${Name}     ${SHA1}     ${MD5}      ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Invalid Name
+                      NOK       ${Respository_Name}    ${Group}    ${Version}    Invalid     ${SHA1}     ${MD5}      ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Invalid SHA1
+                      NOK       ${Respository_Name}    ${Group}    ${Version}    ${Name}     Invalid     ${MD5}      ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Invalid MD5
+                      NOK       ${Respository_Name}    ${Group}    ${Version}    ${Name}     ${SHA1}     Invalid     ${TargetFolder}    ${FileName}
+
+Retrieve Raw Artifact with Invalid Target Folder
+                      NOK       ${Respository_Name}    ${Group}    ${Version}    ${Name}     ${SHA1}     ${MD5}      Invalid            ${FileName}
+
+Retrieve Raw Artifact with invalid File Name
+                      NOK       ${Respository_Name}    ${EMPTY}    ${EMPTY}      ${EMPTY}    ${EMPTY}    ${EMPTY}    ${EMPTY}           Invalid
+
+Assert Repository Name as Mandatory Field
+                      NOK       ${EMPTY}               ${Group}    ${Version}    ${Name}     ${SHA1}     ${MD5}      ${TargetFolder}    ${FileName}
+
+Assert File Name as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group}    ${Version}    ${Name}     ${SHA1}     ${MD5}      ${TargetFolder}    ${EMPTY}
+
+*** Keywords ***
+Startup
+    Log    *******Start Test "RETRIEVE RAW ARTIFACT"*******
+    Log    *******Connect to AE*******
+    Connect AE
+
+Retrieve Raw Artifact Template
+    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${Group}    ${Version}    ${Name}    ${SHA1}
+    ...    ${MD5}    ${TargetFolder}    ${FileName}
+    [Documentation]    This test retrieves a raw artifact on Nexus repository
+    ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
+    ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
+    ...    -${Group}: This field specifies group of the component.
+    ...    -${Version}: This field specifies Provide version of the component.
+    ...    -${Name}: This field Provide name of the component.
+    ...    -${SHA1} : Specific SHA-1 hash of component's asset
+    ...    -${MD5}: Specific MD5 hash of component's asset
+    ...    -${TargetFolder}: Provide target folder in which artifact will be downloaded. If empty default temporary folder is used
+    ...    -${FileName}: Filename with the extension.
+    Generate String
+    Init Action    ${_RETRIEVE_RAW_ARTIFACT_ACTION}
+    Nexus Authentication
+    Run Keyword If    '${RespositoryName}' == 'Invalid'    Action Set    &UC4RB_NXS_REPOSITORY#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_REPOSITORY#    ${RespositoryName}
+    Run Keyword If    '${Group}' == 'Invalid'    Action Set    &UC4RB_NXS_GROUP#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_GROUP#    ${Group}
+    Run Keyword If    '${Version}' == 'Invalid'    Action Set    &UC4RB_NXS_VERSION#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_VERSION#    ${Version}
+    Run Keyword If    '${Name}' == 'Invalid'    Action Set    &UC4RB_NXS_NAME#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_NAME#    ${Name}
+    Run Keyword If    '${SHA1}' == 'Invalid'    Action Set    &UC4RB_NXS_SHA_1#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_SHA_1#    ${SHA1}
+    Run Keyword If    '${MD5}' == 'Invalid'    Action Set    &UC4RB_NXS_MD5#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_MD5#    ${MD5}
+    Run Keyword If    '${TargetFolder}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_TARGET#    ${TargetFolder}
+    Run Keyword If    '${FileName}' == 'Invalid'    Action Set    &UC4RB_NXS_FILE_NAME#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_FILE_NAME#    ${FileName}
+    Action Execute
+    Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_ARCHIVE_PATH#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_ARCHIVE_PATH#
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_FILE_NAME#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_FILE_NAME#
+
+Teardown
+    Log    *******End Test "RETRIEVE RAW ARTIFACT"*******
