@@ -446,7 +446,7 @@ Note:
 -Group*:                                                      Provide group of the component. E.g. actions
 -Name*:                                                      Provide name of the component.E.g. action-jar
 -Target Folder:                                            Provide target folder in which artifact will be downloaded. E.g. C:\Automic
--Target File*:                                                 Filename with the extension.E.g. Robot.zip
+-Target File*:                                               Filename with the extension.E.g. Robot.zip
 
 
 = Behavior =
