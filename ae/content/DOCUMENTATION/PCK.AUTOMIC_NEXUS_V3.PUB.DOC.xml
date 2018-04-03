@@ -14,9 +14,6 @@ Nexus is a repository manager. It allows to the proxy, collect, and manage softw
 * Upload Maven Artifact
 * Retrieve Raw Artifact 
 
-=ARA Compatibility=
-This Nexus Package also offers custom types for all the Nexus actions which further can be used in ARA.
-
 =Supported Nexus versions=
 Sonatype Nexus >= 3.9.0
 
