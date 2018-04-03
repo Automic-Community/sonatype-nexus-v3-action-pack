@@ -35,15 +35,13 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 	private static final String FILE_NAME = "filename";
 
 	private String repository;
-	private String group;
-	private String name;
-	private String version;
-	private String sha1;
-	private String md5;
+	private String artifactgroup;
+	private String artifactname;
+	private String fileversion;
+	private String filesha1;
+	private String filemd5;
 	private String targetFolder;
 	private String fileName;
-
-
 
 	public RetrieveRawArtifactAction() {
 		addOption(RAW_REPO, true, "Repository");
@@ -66,11 +64,11 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 		repository = getOptionValue(RAW_REPO);
 		NexusValidator.checkNotEmpty(repository, "Repository");
 
-		group = getOptionValue(GROUP);
-		name = getOptionValue(NAME);
-		version = getOptionValue(VERSION);
-		sha1 = getOptionValue(SHA1);
-		md5 = getOptionValue(MD5);
+		artifactgroup = getOptionValue(GROUP);
+		artifactname = getOptionValue(NAME);
+		fileversion = getOptionValue(VERSION);
+		filesha1 = getOptionValue(SHA1);
+		filemd5 = getOptionValue(MD5);
 		targetFolder = getOptionValue(TARGET_FOLDER);
 		fileName = getOptionValue(FILE_NAME);
 		NexusValidator.checkNotEmpty(fileName, "File Name");
@@ -91,28 +89,26 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 		webResource = webResource.path("service").path("rest").path("beta").path("search").path("assets")
 				.path("download").queryParam("repository", repository);
 
-		if (CommonUtil.checkNotEmpty(group)) {
-			webResource = webResource.queryParam("group", group);
+		if (CommonUtil.checkNotEmpty(artifactgroup)) {
+			webResource = webResource.queryParam("group", artifactgroup);
 		}
-		if (CommonUtil.checkNotEmpty(name)) {
-			webResource = webResource.queryParam("name", name);
+		if (CommonUtil.checkNotEmpty(artifactname)) {
+			webResource = webResource.queryParam("name", artifactname);
 		}
-		if (CommonUtil.checkNotEmpty(version)) {
-			webResource = webResource.queryParam("version", version);
-		}
-
-		if (CommonUtil.checkNotEmpty(md5)) {
-			webResource = webResource.queryParam("md5", md5);
+		if (CommonUtil.checkNotEmpty(fileversion)) {
+			webResource = webResource.queryParam("version", fileversion);
 		}
 
-		if (CommonUtil.checkNotEmpty(sha1)) {
-			webResource = webResource.queryParam("sha1", sha1);
+		if (CommonUtil.checkNotEmpty(filemd5)) {
+			webResource = webResource.queryParam("md5", filemd5);
+		}
+
+		if (CommonUtil.checkNotEmpty(filesha1)) {
+			webResource = webResource.queryParam("sha1", filesha1);
 		}
 
 		ConsoleWriter.writeln("Calling url " + webResource.getURI());
-
 		response = webResource.get(ClientResponse.class);
-		
 		prepareOutput(response);
 	}
 
