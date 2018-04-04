@@ -19,7 +19,7 @@ Retrieve Raw Artifact while providing all the fields
 Retrieve Raw Artifact while providing all the fields and File name already exist.
                       OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
 
-Retrieve Raw Artifact with file name having no extension
+Retrieve Maven Artifact with invalid extension 
                       OK        ${Respository_Name}    ${Group}    ${Name}     C:\\Myfile\\myfile4april
 
 Retrieve Raw Artifact with Non-Existing Repository
