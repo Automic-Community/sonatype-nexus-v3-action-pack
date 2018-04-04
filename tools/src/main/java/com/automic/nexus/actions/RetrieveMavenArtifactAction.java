@@ -30,7 +30,6 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	private static final String ARTIFACT_ID = "artifactid";
 	private static final String BASE_VERSION = "baseversion";
 	private static final String TARGET_FOLDER = "target";
-	private static final String FILE_NAME = "filename";
 	private static final String CLASSIFIER = "classifier";
 	private static final String EXTENSION = "extension";
 
@@ -39,7 +38,6 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	private String artifactid;
 	private String baseversion;
 	private String targetFolder;
-	private String fileName;
 	private String fileclassifier;
 	private String fileExtension;
 
@@ -49,7 +47,6 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		addOption(ARTIFACT_ID, true, "Artifact ID");
 		addOption(BASE_VERSION, true, "Base Version");
 		addOption(TARGET_FOLDER, true, "Target Folder");
-		addOption(FILE_NAME, true, "File Name");
 		addOption(CLASSIFIER, false, "classifier");
 		addOption(EXTENSION, false, "extension");
 	}
@@ -72,8 +69,6 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		NexusValidator.checkNotEmpty(targetFolder, "Target Folder");
 		fileclassifier = getOptionValue(CLASSIFIER);
 		fileExtension = getOptionValue(EXTENSION);
-		fileName = getOptionValue(FILE_NAME);
-		NexusValidator.checkNotEmpty(fileName, "File Name");
 
 	}
 
@@ -107,7 +102,7 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 
 	private void prepareOutput(ClientResponse response) throws AutomicException {
 
-		Path storedLocation = Paths.get(targetFolder, fileName);
+		Path storedLocation = Paths.get(targetFolder);
 		try (InputStream is = response.getEntityInputStream()) {
 			Files.copy(is, storedLocation, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
