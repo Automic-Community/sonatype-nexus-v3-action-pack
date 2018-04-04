@@ -14,12 +14,12 @@ Resource          ../../Resources/actions.txt
 *** Test Cases ***    OK_NOK    RespositoryName        GroupID        ArtifactID        BaseVersion        Extension    Classifier    TargetFile
 Retrieve Maven Artifact while providing all the fields
                       [Tags]    main_scenarios
-                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    jar          dev           ${File_Name}
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact while providing all the fields and Target File name already exist.
                       OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
-Retrieve Maven Artifact with Target file name having no extension
+Retrieve Maven Artifact with Target file name having invalid extension
                       OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      MytargetFile
 
 Retrieve Maven Artifact with Non-Existing Repository
@@ -66,7 +66,7 @@ Startup
 
 Retrieve Maven Artifact Template
     [Arguments]    ${OK_NOK}    ${RespositoryName}    ${GroupID}    ${ArtifactID}    ${BaseVersion}    ${Extension}
-    ...    ${Classifier}    ${TargetFolder}    ${TargetFile}
+    ...    ${Classifier}    ${TargetFile}
     [Documentation]    This test retrieves a maven artifact on Nexus repository
     ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
     ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
@@ -90,7 +90,8 @@ Retrieve Maven Artifact Template
     ...    &UC4RB_NXS_EXTENSION#    ${Extension}
     Run Keyword If    '${Classifier}' == 'Invalid'    Action Set    &UC4RB_NXS_CLASSIFIER#    ${Generated_Name}_${Time}    ELSE    Action Set
     ...    &UC4RB_NXS_CLASSIFIER#    ${Classifier}
-    Action Set    &UC4RB_NXS_TARGET_FILE#    ${TargetFile}
+    Run Keyword If    '${TargetFile}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_TARGET#    ${TargetFile}
     Action Execute
     Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
 
