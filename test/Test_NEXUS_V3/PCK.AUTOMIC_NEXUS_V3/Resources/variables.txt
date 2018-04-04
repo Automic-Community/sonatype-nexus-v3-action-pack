@@ -20,5 +20,4 @@ ${Artifact_Version}    1.0.0
 #----Retrieve Raw Artifact-----------------------------------------------------------------------------------
 ${Group}          /actions
 ${Name}           actions/actions-jar
-${Target_Folder}    C:\\Myfile
-${File_Name}      MydownoadedFile.zip
+${File_Name}      C:\Myfile\MydownoadFile.jar
