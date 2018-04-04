@@ -11,43 +11,40 @@ Resource          ../../Resources/keywords.txt
 Resource          ../../Resources/variables.txt
 Resource          ../../Resources/actions.txt
 
-*** Test Cases ***    OK_NOK    RespositoryName        Group       Name        TargetFolder        FileName
+*** Test Cases ***    OK_NOK    RespositoryName        Group       Name        TargetFile
 Retrieve Raw Artifact while providing all the fields
                       [Tags]    main_scenarios
-                      OK        ${Respository_Name}    ${Group}    ${Name}     ${Target_Folder}    ${File_Name}
+                      OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
 
 Retrieve Raw Artifact while providing all the fields and File name already exist.
-                      OK        ${Respository_Name}    ${Group}    ${Name}     ${Target_Folder}    ${File_Name}
+                      OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
 
-Retrieve Raw Artifact with file name having no extensio
-                      OK        ${Respository_Name}    ${Group}    ${Name}     ${Target_Folder}    MyFile
-
-Retrieve Raw Artifact with target Folder as Empty
-                      OK        ${Respository_Name}    ${Group}    ${Name}     ${EMPTY}            ${File_Name}
+Retrieve Raw Artifact with file name having no extension
+                      OK        ${Respository_Name}    ${Group}    ${Name}     MyFile
 
 Retrieve Raw Artifact with Non-Existing Repository
-                      NOK       Invalid                ${Group}    ${Name}     ${Target_Folder}    ${File_Name}
+                      NOK       Invalid                ${Group}    ${Name}     ${File_Name}
 
 Retrieve Raw Artifact with Non-Existing Group
-                      NOK       ${Respository_Name}    Invalid     ${Name}     ${Target_Folder}    ${File_Name}
+                      NOK       ${Respository_Name}    Invalid     ${Name}     ${File_Name}
 
 Retrieve Raw Artifact with Invalid Name
-                      NOK       ${Respository_Name}    ${Group}    Invalid     ${Target_Folder}    ${File_Name}
+                      NOK       ${Respository_Name}    ${Group}    Invalid     ${File_Name}
 
-Retrieve Raw Artifact with Invalid Target Folder
-                      NOK       ${Respository_Name}    ${Group}    ${Name}     Invalid             ${File_Name}
+Retrieve Raw Artifact with Invalid Target File path
+                      NOK       ${Respository_Name}    ${Group}    ${Name}     Invalid
 
 Assert Repository Name as Mandatory Field
-                      NOK       ${EMPTY}               ${Group}    ${Name}     ${Target_Folder}    ${File_Name}
+                      NOK       ${EMPTY}               ${Group}    ${Name}     ${File_Name}
 
 Assert Group as Mandatory Field
-                      NOK       ${Respository_Name}    ${EMPTY}    ${Name}     ${Target_Folder}    ${File_Name}
+                      NOK       ${Respository_Name}    ${EMPTY}    ${Name}     ${File_Name}
 
 Assert Name as Mandatory Field
-                      NOK       ${Respository_Name}    ${Group}    ${EMPTY}    ${Target_Folder}    ${File_Name}
+                      NOK       ${Respository_Name}    ${Group}    ${EMPTY}    ${File_Name}
 
 Assert File Name as Mandatory Field
-                      NOK       ${Respository_Name}    ${Group}    ${Name}     ${Target_Folder}    ${EMPTY}
+                      NOK       ${Respository_Name}    ${Group}    ${Name}     ${EMPTY}
 
 *** Keywords ***
 Startup
@@ -56,14 +53,13 @@ Startup
     Connect AE
 
 Retrieve Raw Artifact Template
-    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${Group}    ${Name}    ${TargetFolder}    ${FileName}
+    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${Group}    ${Name}    ${TargetFile}
     [Documentation]    This test retrieves a raw artifact on Nexus repository
     ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
     ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
     ...    -${Group}: This field specifies group of the component.
     ...    -${Name}: This field Provide name of the component.
-    ...    -${TargetFolder}: Provide target folder in which artifact will be downloaded. If empty default temporary folder is used
-    ...    -${FileName}: Filename with the extension.
+    ...    -${TargetFile}: Provide target file name with full path for artifact to be downloaded with extension
     Generate String
     Init Action    ${_RETRIEVE_RAW_ARTIFACT_ACTION}
     Nexus Authentication
@@ -73,13 +69,9 @@ Retrieve Raw Artifact Template
     ...    &UC4RB_NXS_GROUP#    ${Group}
     Run Keyword If    '${Name}' == 'Invalid'    Action Set    &UC4RB_NXS_NAME#    ${Generated_Name}_${Time}    ELSE    Action Set
     ...    &UC4RB_NXS_NAME#    ${Name}
-    Run Keyword If    '${TargetFolder}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
-    ...    &UC4RB_NXS_TARGET#    ${TargetFolder}
-    Action Set    &UC4RB_NXS_FILE_NAME#    ${FileName}
+    Action Set    &UC4RB_NXS_FILE_NAME#    ${TargetFile}
     Action Execute
     Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_ARCHIVE_PATH#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_ARCHIVE_PATH#
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_FILE_NAME#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_FILE_NAME#
 
 Teardown
     Log    *******End Test "RETRIEVE RAW ARTIFACT"*******
