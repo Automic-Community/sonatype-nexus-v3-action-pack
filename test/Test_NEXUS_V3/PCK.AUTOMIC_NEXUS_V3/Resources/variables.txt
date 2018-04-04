@@ -20,4 +20,4 @@ ${Artifact_Version}    1.0.0
 #----Retrieve Raw Artifact-----------------------------------------------------------------------------------
 ${Group}          /actions
 ${Name}           actions/actions-jar
-${File_Name}      C:\Myfile\MydownoadFile.jar
+${File_Name}      C:\\Myfile\\myfileapril.jar

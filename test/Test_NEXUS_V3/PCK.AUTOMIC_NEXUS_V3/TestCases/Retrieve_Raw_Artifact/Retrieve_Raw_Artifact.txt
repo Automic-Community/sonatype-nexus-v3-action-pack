@@ -20,7 +20,7 @@ Retrieve Raw Artifact while providing all the fields and File name already exist
                       OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
 
 Retrieve Raw Artifact with file name having no extension
-                      OK        ${Respository_Name}    ${Group}    ${Name}     MyFile
+                      OK        ${Respository_Name}    ${Group}    ${Name}     C:\\Myfile\\myfile4april
 
 Retrieve Raw Artifact with Non-Existing Repository
                       NOK       Invalid                ${Group}    ${Name}     ${File_Name}
@@ -69,7 +69,8 @@ Retrieve Raw Artifact Template
     ...    &UC4RB_NXS_GROUP#    ${Group}
     Run Keyword If    '${Name}' == 'Invalid'    Action Set    &UC4RB_NXS_NAME#    ${Generated_Name}_${Time}    ELSE    Action Set
     ...    &UC4RB_NXS_NAME#    ${Name}
-    Action Set    &UC4RB_NXS_FILE_NAME#    ${TargetFile}
+    Run Keyword If    '${TargetFile}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_TARGET#    ${TargetFile}
     Action Execute
     Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
 
