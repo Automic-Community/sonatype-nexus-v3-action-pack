@@ -1,0 +1,78 @@
+*** Settings ***
+Suite Setup       Startup
+Suite Teardown    Teardown
+Force Tags        retrieve_raw_artifact
+Test Template     Retrieve Raw Artifact Template
+Library           com.automic.robot.itpa.ItpaLibrary
+Library           String
+Library           DateTime
+Resource          ../../Resources/messages.txt
+Resource          ../../Resources/keywords.txt
+Resource          ../../Resources/variables.txt
+Resource          ../../Resources/actions.txt
+
+*** Test Cases ***    OK_NOK    RespositoryName        Group       Name        TargetFile
+Retrieve Raw Artifact while providing all the fields
+                      [Tags]    main_scenarios
+                      OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
+
+Retrieve Raw Artifact while providing all the fields and File name already exist.
+                      OK        ${Respository_Name}    ${Group}    ${Name}     ${File_Name}
+
+Retrieve Raw Artifact with file name having no extension
+                      OK        ${Respository_Name}    ${Group}    ${Name}     C:\\Myfile\\myfile4april
+
+Retrieve Raw Artifact with Non-Existing Repository
+                      NOK       Invalid                ${Group}    ${Name}     ${File_Name}
+
+Retrieve Raw Artifact with Non-Existing Group
+                      NOK       ${Respository_Name}    Invalid     ${Name}     ${File_Name}
+
+Retrieve Raw Artifact with Invalid Name
+                      NOK       ${Respository_Name}    ${Group}    Invalid     ${File_Name}
+
+Retrieve Raw Artifact with Invalid Target File path
+                      NOK       ${Respository_Name}    ${Group}    ${Name}     Invalid
+
+Assert Repository Name as Mandatory Field
+                      NOK       ${EMPTY}               ${Group}    ${Name}     ${File_Name}
+
+Assert Group as Mandatory Field
+                      NOK       ${Respository_Name}    ${EMPTY}    ${Name}     ${File_Name}
+
+Assert Name as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group}    ${EMPTY}    ${File_Name}
+
+Assert File Name as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group}    ${Name}     ${EMPTY}
+
+*** Keywords ***
+Startup
+    Log    *******Start Test "RETRIEVE RAW ARTIFACT"*******
+    Log    *******Connect to AE*******
+    Connect AE
+
+Retrieve Raw Artifact Template
+    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${Group}    ${Name}    ${TargetFile}
+    [Documentation]    This test retrieves a raw artifact on Nexus repository
+    ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
+    ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
+    ...    -${Group}: This field specifies group of the component.
+    ...    -${Name}: This field Provide name of the component.
+    ...    -${TargetFile}: Provide target file name with full path for artifact to be downloaded with extension
+    Generate String
+    Init Action    ${_RETRIEVE_RAW_ARTIFACT_ACTION}
+    Nexus Authentication
+    Run Keyword If    '${RespositoryName}' == 'Invalid'    Action Set    &UC4RB_NXS_REPOSITORY#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_REPOSITORY#    ${RespositoryName}
+    Run Keyword If    '${Group}' == 'Invalid'    Action Set    &UC4RB_NXS_GROUP#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_GROUP#    ${Group}
+    Run Keyword If    '${Name}' == 'Invalid'    Action Set    &UC4RB_NXS_NAME#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_NAME#    ${Name}
+    Run Keyword If    '${TargetFile}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_TARGET#    ${TargetFile}
+    Action Execute
+    Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
+
+Teardown
+    Log    *******End Test "RETRIEVE RAW ARTIFACT"*******

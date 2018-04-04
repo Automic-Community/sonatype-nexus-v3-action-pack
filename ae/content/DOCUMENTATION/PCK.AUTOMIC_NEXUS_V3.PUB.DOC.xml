@@ -12,9 +12,7 @@
 Nexus is a repository manager. It allows to the proxy, collect, and manage software dependencies and makes it easy to distribute implemented software. With this package we automate the Sonatype Nexus services for the artifact that achieve the given business goal:
 * Upload Raw Artifact
 * Upload Maven Artifact
-
-=ARA Compatibility=
-This Nexus Package also offers custom types for all the Nexus actions which further can be used in ARA.
+* Retrieve Raw Artifact 
 
 =Supported Nexus versions=
 Sonatype Nexus >= 3.9.0
@@ -42,6 +40,10 @@ Following actions are supported by Nexus.
 
 * Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_MAVEN_ARTIFACT
 * Action Description: This action uploads content to nexus Maven repository.
+
+*Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_RAW_ARTIFACT
+* Action Description: This action retrieves artifact from nexus raw repository.
+
 ]]></DOC>
 </DOCU_Docu>
 </DOCU>

@@ -17,3 +17,7 @@ ${Maven_Extension}    jar
 ${Group_ID}       com.automic
 ${Artifact_ID}    artifactory
 ${Artifact_Version}    1.0.0
+#----Retrieve Raw Artifact-----------------------------------------------------------------------------------
+${Group}          /actions
+${Name}           actions/actions-jar
+${File_Name}      C:\\Myfile\\myfileapril.jar
