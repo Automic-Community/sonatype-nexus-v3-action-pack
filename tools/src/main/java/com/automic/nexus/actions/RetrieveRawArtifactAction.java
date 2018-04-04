@@ -28,20 +28,18 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 	private static final String GROUP = "group";
 	private static final String NAME = "name";
 	private static final String TARGET_FOLDER = "target";
-	private static final String FILE_NAME = "filename";
 
 	private String repository;
 	private String artifactgroup;
 	private String artifactname;
 	private String targetFolder;
-	private String fileName;
+	
 
 	public RetrieveRawArtifactAction() {
 		addOption(RAW_REPO, true, "Repository");
 		addOption(GROUP, true, "Group");
 		addOption(NAME, true, "Name");
 		addOption(TARGET_FOLDER, true, "Target Folder");
-		addOption(FILE_NAME, true, "Target File");
 	}
 
 	/**
@@ -58,8 +56,6 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 		NexusValidator.checkNotEmpty(artifactname, "Name");
 		targetFolder = getOptionValue(TARGET_FOLDER);
 		NexusValidator.checkNotEmpty(targetFolder, "Target Folder");
-		fileName = getOptionValue(FILE_NAME);
-		NexusValidator.checkNotEmpty(fileName, "Target File");
 
 	}
 
@@ -84,7 +80,10 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 	}
 
 	private void prepareOutput(ClientResponse response) throws AutomicException {
-		Path storedLocation = Paths.get(targetFolder, fileName);
+		int pos = targetFolder.lastIndexOf('\\');
+		String fileName = targetFolder.substring(pos+1, targetFolder.length());
+		String finalFolder = targetFolder.substring(0, pos);
+		Path storedLocation = Paths.get(finalFolder, fileName);
 		try (InputStream is = response.getEntityInputStream()) {
 			Files.copy(is, storedLocation, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
