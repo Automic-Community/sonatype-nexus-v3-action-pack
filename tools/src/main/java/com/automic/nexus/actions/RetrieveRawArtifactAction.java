@@ -80,10 +80,7 @@ public class RetrieveRawArtifactAction extends AbstractHttpAction {
 	}
 
 	private void prepareOutput(ClientResponse response) throws AutomicException {
-		int pos = targetFolder.lastIndexOf('\\');
-		String fileName = targetFolder.substring(pos+1, targetFolder.length());
-		String finalFolder = targetFolder.substring(0, pos);
-		Path storedLocation = Paths.get(finalFolder, fileName);
+		Path storedLocation = Paths.get(targetFolder);
 		try (InputStream is = response.getEntityInputStream()) {
 			Files.copy(is, storedLocation, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
