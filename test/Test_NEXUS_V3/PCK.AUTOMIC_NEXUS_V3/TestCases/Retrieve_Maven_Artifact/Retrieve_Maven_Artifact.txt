@@ -11,55 +11,52 @@ Resource          ../../Resources/keywords.txt
 Resource          ../../Resources/variables.txt
 Resource          ../../Resources/actions.txt
 
-*** Test Cases ***    OK_NOK    RespositoryName        GroupID        ArtifactID        BaseVersion        Extension    Classifier    TargetFolder        TargetFile
+*** Test Cases ***    OK_NOK    RespositoryName        GroupID        ArtifactID        BaseVersion        Extension    Classifier    TargetFile
 Retrieve Maven Artifact while providing all the fields
                       [Tags]    main_scenarios
-                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    jar          dev           ${Target_Folder}    ${File_Name}
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    jar          dev           ${File_Name}
 
 Retrieve Maven Artifact while providing all the fields and Target File name already exist.
-                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${Target_Folder}    ${File_Name}
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with Target file name having no extension
-                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${Target_Folder}    MytargetFile
-
-Retrieve Maven Artifact with target Folder as Empty
-                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      MytargetFile
 
 Retrieve Maven Artifact with Non-Existing Repository
-                      NOK       Invalid                ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       Invalid                ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with Non-Existing Group ID
-                      NOK       ${Respository_Name}    Invalid        ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    Invalid        ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with Invalid artifact ID
-                      NOK       ${Respository_Name}    ${Group_ID}    Invalid           ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    Invalid           ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with Invalid base Version
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    Invalid            ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    Invalid            ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with extension
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    Invalid      ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    Invalid      ${EMPTY}      ${File_Name}
 
 Retrieve Maven Artifact with Invalid classifier
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     Invalid       ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     Invalid       ${File_Name}
 
-Retrieve Maven Artifact with Invalid Target Folder
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      Invalid             ${File_Name}
+Retrieve Maven Artifact with Invalid Target File
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      Invalid
 
 Assert Repository Name as Mandatory Field
-                      NOK       ${EMPTY}               ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${EMPTY}               ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Assert Group ID as Mandatory Field
-                      NOK       ${Respository_Name}    ${EMPTY}       ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${EMPTY}       ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Assert Artifact ID as Mandatory Field
-                      NOK       ${Respository_Name}    ${Group_ID}    ${EMPTY}          ${Base_Version}    ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${EMPTY}          ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Assert Base Version as Mandatory Field
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${EMPTY}            ${File_Name}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${File_Name}
 
 Assert Target File as Mandatory Field
-                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${EMPTY}            ${EMPTY}
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${EMPTY}
 
 *** Keywords ***
 Startup
@@ -77,7 +74,6 @@ Retrieve Maven Artifact Template
     ...    -${ArtifactID}: This field Specifies id of the artifact to be retrieved.
     ...    -${BaseVersion}: This field Specifies extension of the component..
     ...    -${Classifier}: This field Specifies classifier of the component.
-    ...    -${TargetFolder}: This field Specifies target folder in which artifact will be downloaded. If empty default temporary folder is used
     ...    -${TargetFile}: This field Specifies target file in which artifact will be downloaded..
     Generate String
     Init Action    ${_RETRIEVE_MAVEN_ARTIFACT_ACTION}
@@ -94,13 +90,9 @@ Retrieve Maven Artifact Template
     ...    &UC4RB_NXS_EXTENSION#    ${Extension}
     Run Keyword If    '${Classifier}' == 'Invalid'    Action Set    &UC4RB_NXS_CLASSIFIER#    ${Generated_Name}_${Time}    ELSE    Action Set
     ...    &UC4RB_NXS_CLASSIFIER#    ${Classifier}
-    Run Keyword If    '${TargetFolder}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
-    ...    &UC4RB_NXS_TARGET#    ${TargetFolder}
     Action Set    &UC4RB_NXS_TARGET_FILE#    ${TargetFile}
     Action Execute
     Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_ARCHIVE_PATH#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_ARCHIVE_PATH#
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Object Variable Should Be Found    &UC4RB_NXS_FILE_NAME#    ELSE    Action Object Variable Should Not Be Found    &UC4RB_NXS_FILE_NAME#
 
 Teardown
     Log    *******End Test "RETRIEVE MAVEN ARTIFACT"*******

@@ -19,5 +19,4 @@ ${Artifact_ID}    commons-io
 ${Artifact_Version}    1.0.0
 #----Retrieve Maven Artifact-----------------------------------------------------------------------------------
 ${Base_Version}    1.1.2
-${Target_Folder}    C:\\Myfile
-${File_Name}      commons-io.jar
+${File_Name}      C:\\Myfile\\commons-io.jar
