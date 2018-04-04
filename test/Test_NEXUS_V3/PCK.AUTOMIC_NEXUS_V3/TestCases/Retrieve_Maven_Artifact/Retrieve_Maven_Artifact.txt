@@ -12,7 +12,7 @@ Resource          ../../Resources/variables.txt
 Resource          ../../Resources/actions.txt
 
 *** Test Cases ***    OK_NOK    RespositoryName        GroupID        ArtifactID        BaseVersion        Extension    Classifier    TargetFile
-Retrieve Maven Artifact while providing all the fields
+Retrieve Maven Artifact while providing mandatory values in all fields
                       [Tags]    main_scenarios
                       OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
 
@@ -72,7 +72,8 @@ Retrieve Maven Artifact Template
     ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
     ...    -${GroupID}: This field Specifies group id of the component.
     ...    -${ArtifactID}: This field Specifies id of the artifact to be retrieved.
-    ...    -${BaseVersion}: This field Specifies extension of the component..
+    ...    -${BaseVersion}: This field Specifies Provide base version of the component. .
+    ...    -${Extension}: This field Specifies extension of the component.
     ...    -${Classifier}: This field Specifies classifier of the component.
     ...    -${TargetFile}: This field Specifies target file in which artifact will be downloaded..
     Generate String
