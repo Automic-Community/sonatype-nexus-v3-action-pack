@@ -6,7 +6,7 @@ Resource          ../../../Env/default.txt
 ${URL_Nexus}      http://10.243.44.110:8081
 ${UserName_Nexus}    admin
 ${Password_Nexus}    admin123
-${Respository_Name}    raw-repo
+${Respository_Name}    maven_test_repo
 ${Maven_Respository_Name}    maven-releases
 ${Upload_Artifact}    ${EXECDIR}\\test.jar
 #----Upload Raw Artifact-------------------------------------------------------------------------------------
@@ -14,10 +14,12 @@ ${Dir}            /automic/test
 #----Upload Maven Artifact-----------------------------------------------------------------------------------
 ${Maven_Classifier}    robot
 ${Maven_Extension}    jar
-${Group_ID}       com.automic
-${Artifact_ID}    artifactory
+${Group_ID}       org.apache.tomcat
+${Artifact_ID}    tomcat-annotations-api
 ${Artifact_Version}    1.0.0
 #----Retrieve Raw Artifact-----------------------------------------------------------------------------------
 ${Group}          /actions
 ${Name}           actions/actions-jar
-${File_Name}      C:\\Myfile\\myfileapril.jar
+${File_Name}      C:\\myfileapril.jar
+#----Retrieve Maven Artifact-----------------------------------------------------------------------------------
+${Base_Version}    8.5.23

@@ -1,0 +1,100 @@
+*** Settings ***
+Suite Setup       Startup
+Suite Teardown    Teardown
+Force Tags        retrieve_maven_artifact
+Test Template     Retrieve Maven Artifact Template
+Library           com.automic.robot.itpa.ItpaLibrary
+Library           String
+Library           DateTime
+Resource          ../../Resources/messages.txt
+Resource          ../../Resources/keywords.txt
+Resource          ../../Resources/variables.txt
+Resource          ../../Resources/actions.txt
+
+*** Test Cases ***    OK_NOK    RespositoryName        GroupID        ArtifactID        BaseVersion        Extension    Classifier    TargetFile
+Retrieve Maven Artifact while providing mandatory values in all fields
+                      [Tags]    main_scenarios
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact while providing all the fields and Target File name already exist.
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with Target file name having invalid extension
+                      OK        ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      MytargetFile
+
+Retrieve Maven Artifact with Non-Existing Repository
+                      NOK       Invalid                ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with Non-Existing Group ID
+                      NOK       ${Respository_Name}    Invalid        ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with Invalid artifact ID
+                      NOK       ${Respository_Name}    ${Group_ID}    Invalid           ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with Invalid base Version
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    Invalid            ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with extension
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    Invalid      ${EMPTY}      ${File_Name}
+
+Retrieve Maven Artifact with Invalid classifier
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     Invalid       ${File_Name}
+
+Retrieve Maven Artifact with Invalid Target File
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      Invalid
+
+Assert Repository Name as Mandatory Field
+                      NOK       ${EMPTY}               ${Group_ID}    ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Assert Group ID as Mandatory Field
+                      NOK       ${Respository_Name}    ${EMPTY}       ${Artifact_ID}    ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Assert Artifact ID as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group_ID}    ${EMPTY}          ${Base_Version}    ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Assert Base Version as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${File_Name}
+
+Assert Target File as Mandatory Field
+                      NOK       ${Respository_Name}    ${Group_ID}    ${Artifact_ID}    ${EMPTY}           ${EMPTY}     ${EMPTY}      ${EMPTY}
+
+*** Keywords ***
+Startup
+    Log    *******Start Test "RETRIEVE MAVEN ARTIFACT"*******
+    Log    *******Connect to AE*******
+    Connect AE
+
+Retrieve Maven Artifact Template
+    [Arguments]    ${OK_NOK}    ${RespositoryName}    ${GroupID}    ${ArtifactID}    ${BaseVersion}    ${Extension}
+    ...    ${Classifier}    ${TargetFile}
+    [Documentation]    This test retrieves a maven artifact on Nexus repository
+    ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
+    ...    -${RespositoryName}: This field specifies name of the repository from which you want to retrieve artifact.
+    ...    -${GroupID}: This field Specifies group id of the component.
+    ...    -${ArtifactID}: This field Specifies id of the artifact to be retrieved.
+    ...    -${BaseVersion}: This field Specifies Provide base version of the component. .
+    ...    -${Extension}: This field Specifies extension of the component.
+    ...    -${Classifier}: This field Specifies classifier of the component.
+    ...    -${TargetFile}: This field Specifies target file in which artifact will be downloaded..
+    Generate String
+    Init Action    ${_RETRIEVE_MAVEN_ARTIFACT_ACTION}
+    Nexus Authentication
+    Run Keyword If    '${RespositoryName}' == 'Invalid'    Action Set    &UC4RB_NXS_REPOSITORY#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_REPOSITORY#    ${RespositoryName}
+    Run Keyword If    '${GroupID}' == 'Invalid'    Action Set    &UC4RB_NXS_GROUP_ID#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_GROUP_ID#    ${GroupID}
+    Run Keyword If    '${ArtifactID}' == 'Invalid'    Action Set    &UC4RB_NXS_ARTIFACT_ID#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_ARTIFACT_ID#    ${ArtifactID}
+    Run Keyword If    '${BaseVersion}' == 'Invalid'    Action Set    &UC4RB_NXS_VERSION#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_VERSION#    ${BaseVersion}
+    Run Keyword If    '${Extension}' == 'Invalid'    Action Set    &UC4RB_NXS_EXTENSION#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_EXTENSION#    ${Extension}
+    Run Keyword If    '${Classifier}' == 'Invalid'    Action Set    &UC4RB_NXS_CLASSIFIER#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_CLASSIFIER#    ${Classifier}
+    Run Keyword If    '${TargetFile}' == 'Invalid'    Action Set    &UC4RB_NXS_TARGET#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_NXS_TARGET#    ${TargetFile}
+    Action Execute
+    Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
+
+Teardown
+    Log    *******End Test "RETRIEVE MAVEN ARTIFACT"*******
