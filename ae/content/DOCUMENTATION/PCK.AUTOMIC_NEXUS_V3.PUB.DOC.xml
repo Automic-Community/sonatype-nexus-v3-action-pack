@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <DOCU name="PCK.AUTOMIC_NEXUS_V3.PUB.DOC">
 <HEADER state="1">
-<Title>Pack Documentation</Title>
+<Title>Package Documentation</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <OH_SubType/>
@@ -25,6 +25,10 @@ Sonatype Nexus >= 3.9.0
 * Oracle JDK 1.7 or higher must be installed on Agent OS and "java" must be set as executable on the same.
 * The Agent should be able to access the Nexus URL(s) in order to make HTTP requests.
 * Modify the HTTP timeout parameters as per your environment. By default "CONNECTION_TIMEOUT" is defined as 30000 and "READ_TIMEOUT" is defined as 60000. Both are defined in milliseconds. 0 means no timeout.
+* Use ITPA shared dependency as 1.1.2 or later.
+
+=Implementation Guide=
+* Actions will run on both Windows and Unix agents
 
 =Variables=
 PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:         HTTP timeout parameters can be configured in this variable. Values are defined in milliseconds. 0 means no timeout.
@@ -43,13 +47,12 @@ Following actions are supported by Nexus.
 * Action Description: This action uploads content to nexus Maven repository.
 
 * Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_MAVEN_ARTIFACT
-* Action Description: This action retrieve contents from nexus maven repository.
+* Action Description: This action retrieve contents from nexus Maven repository.
 
 *Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_RAW_ARTIFACT
-* Action Description: This action retrieves artifact from nexus raw repository.
+* Action Description: This action retrieves artifact from nexus Raw repository.
 
 ]]></DOC>
->>>>>>> develop
 </DOCU_Docu>
 </DOCU>
 </uc-export>

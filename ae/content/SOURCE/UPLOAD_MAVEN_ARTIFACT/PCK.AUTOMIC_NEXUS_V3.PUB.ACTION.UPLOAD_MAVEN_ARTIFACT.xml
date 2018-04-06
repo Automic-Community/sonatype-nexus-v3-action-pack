@@ -451,7 +451,7 @@
 PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_MAVEN_ARTIFACT
 
 = General description =
-This action is used to upload the artifact to Nexus maven repository using maven parameters i.e group, artifact, version & extension parameters.. A user can upload the artifact using the login credentials (login and password) or can upload anonymously if the user has the rights to upload. As this is an asynchronous operation, the user needs to cross check if the artifact has been uploaded. The deployment of an artifact depends on the rights that have been permitted to the user for the Nexus repository. If the access setting for the repository is set to "disable redeploy", then the user cannot deploy the same artifact again. If the access setting is set to "read-only", then the user cannot upload any artifact to the repository.
+This action is used to upload the artifact to Nexus maven repository using Maven parameters i.e group, artifact, version & extension parameters. A user can upload the artifact using the login credentials (login and password) or can upload anonymously if the user has the rights to upload. As this is an asynchronous operation, the user needs to cross check if the artifact has been uploaded. The deployment of an artifact depends on the rights that have been permitted to the user for the Nexus repository. If the access setting for the repository is set to "disable redeploy", then the user cannot deploy the same artifact again. If the access setting is set to "read-only", then the user cannot upload any artifact to the repository.
 
 Note:
 * Upload Maven Artifact Actions require Nexus >= 3.9.0
@@ -463,14 +463,14 @@ Note:
 
 = Inputs =
 - Repository Name*:        			   Provide name of the repository in which you want to upload artifact. E.g. maven-releases
-- File*:                                                         Provide file you want to upload with full path.. E.g. C:\commons-io-2.0.1.jar
-- Classifier:        			                  Specify classifier of the artifact. E.g. dev
-- Extension*:        			                  Specify extension of the artifact. E.g. jar 
-- Group ID*:        			            	   Specify Group ID of the artifact. E.g. org.apache
-- Artifact ID*:        			            	  Specify Artifact ID. E.g. commons-io
-- Version*:        			            	   Specify artifact version. E.g. 2.0.1
-- Generate POM*:        			           Generates POM, If Yes is Selected. e.g. Yes	  
-- Packaging*:        			            	  Provide packaging details of the POM. E.g. jar
+- File*:                                           Provide file you want to upload with full path.. E.g. C:\commons-io-2.0.1.jar
+- Classifier:        			           Specify classifier of the artifact. E.g. dev
+- Extension*:        			           Specify extension of the artifact. E.g. jar 
+- Group ID*:        			           Specify Group ID of the artifact. E.g. org.apache
+- Artifact ID*:        			           Specify Artifact ID. E.g. commons-io
+- Version*:        			           Specify artifact version. E.g. 2.0.1
+- Generate POM:        			           Generates POM, If Yes is Selected. e.g. Yes	  
+- Packaging:        			           Provide packaging details of the POM. E.g. jar
 
 = Behavior =
 (none)
@@ -490,14 +490,14 @@ AE logs will be displayed in the AE report.
 
 = Example =
 - Repository Name*:        			  maven-releases
-- File*:                                                        C:\commons-io-2.0.1.jar
-- Classifier:        			                  dev
-- Extension*:        			                  jar 
-- Group ID*:        			            	  org.apache
-- Artifact ID*:        			            	  commons-io
-- Version*:        			            	  2.0.1
-- Generate POM*:        			          Yes	  
-- Packaging*:        			            	  jar]]></DOC>
+- File*:                                          C:\commons-io-2.0.1.jar
+- Classifier:        			          dev
+- Extension*:        			          jar 
+- Group ID*:        			          org.apache
+- Artifact ID*:        			          commons-io
+- Version*:        			          2.0.1
+- Generate POM:        			          Yes	  
+- Packaging:        			          jar]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

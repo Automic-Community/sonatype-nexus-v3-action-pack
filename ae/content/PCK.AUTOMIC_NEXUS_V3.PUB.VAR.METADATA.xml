@@ -25,15 +25,15 @@
 </ATTR_VARA>
 <VARA state="1">
 <Variables>
-<row Name="Categories" Value="Nexus Integration" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Categories" Value="Nexus V3 Integration" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Description" Value="Provides integration with Nexus" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Description" Value="Provides integration with Nexus V3" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Homepage" Value="www.automic.com" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="License" Value="Automic License" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Name" Value="PCK.AUTOMIC_NEXUS_V3" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Package Format Version" Value="0.3.0" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Title" Value="Automic Nexus package" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Title" Value="Automic Nexus V3 package" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Version" Value="1.0.0" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>

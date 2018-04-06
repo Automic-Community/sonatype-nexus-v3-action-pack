@@ -438,9 +438,9 @@ Note:
 
 = Inputs =
 - Repository Name*:        			    Provide the name of the repository in which you want to upload artifact. E.g. raw-repo
-- File*:                                                         Provide file you want to upload with full path. E.g. C:\commons-io-2.0.1.jar	
-- File Name:                                                Provide the name to your file. E.g. commons-io-2.0.1
-- Directory*:                                                 Provide destination directory in which file will be uploaded. E.g. commons
+- File*:                                            Provide file you want to upload with full path. E.g. C:\commons-io-2.0.1.jar	
+- File Name:                                        Provide the name to your file. E.g. commons-io-2.0.1
+- Directory*:                                       Provide destination directory in which file will be uploaded. E.g. commons
 
 = Behavior =
 * If the user does not provide the filename, action will fetch the filename from File path provided.
@@ -460,9 +460,9 @@ AE logs will be displayed in the AE report.
 
 = Example =
 - Repository Name*:        			   raw-repo
-- File*:                                                        C:\commons-io-2.0.1.jar	
-- File Name:                                               commons-io-2.0.1
-- Directory*:                                                commons]]></DOC>
+- File*:                                           C:\commons-io-2.0.1.jar	
+- File Name:                                       commons-io-2.0.1
+- Directory*:                                      commons]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

@@ -66,7 +66,6 @@
 <node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_GROUPs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
@@ -144,7 +143,6 @@
 <node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_GROUPs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
@@ -222,7 +220,6 @@
 <node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_GROUPs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
@@ -287,7 +284,6 @@
 <node content="1" id="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT">
-<UC4RB_NXS_FILE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_FILE_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_GROUPs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_NAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_RAW_ARTIFACT"/>
@@ -384,7 +380,6 @@
 <UC4RB_NXS_GROUPs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_NAMEs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_TARGETs.00 altview="0" haslist="0"/>
-<UC4RB_NXS_FILE_NAMEs.00 altview="0" haslist="0"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -431,7 +426,7 @@
 PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_RAW_ARTIFACT
 
 = General description =
-This action is used to retrieve the artifact from Nexus raw repository using parameters i.e group & name . A user can retrieve an artifact using the login credentials (login and password) or can retrieve anonymously if the user has the rights to do so. Output of this action will be AE variables consisting retrieved archive file path and file name.
+This action is used to retrieve the artifact from Nexus raw repository using parameters i.e group, name. A user can retrieve an artifact using the login credentials (login and password) or can retrieve anonymously if the user has the rights to do so.
 
 Note:
 * Retrieve Raw Artifact Actions require Nexus >= 3.9.0
@@ -439,24 +434,19 @@ Note:
 = Failure Conditions =
 * Wrong connection details like username, password or Nexus URL
 * Specified group or name details are invalid.
-* Specified 'folder to save in' path is invalid.
+* Specified target file path is invalid.
 
 = Inputs =
--Repository Name*:        			           Provide the name of the repository in which you want to upload artifact. E.g. raw-repo
--Group*:                                                      Provide group of the component. E.g. actions
--Name*:                                                      Provide name of the component.E.g. action-jar
--Target Folder:                                            Provide target folder in which artifact will be downloaded. E.g. C:\Automic
--Target File*:                                               Filename with the extension.E.g. Robot.zip
-
+-Repository Name*:        			           Provide the name of the repository from which you want to retrieve artifact. E.g. raw-repo
+-Group*:                                                   Provide the name of the group of the component. E.g. actions
+-Name*:                                                    Provide the name of the component. E.g. action-jar
+-Target File*:                                             Provide target file name with full path for artifact to be downloaded.E.g. C:\Automic\Actions.zip
 
 = Behavior =
-* If the user does not provide the target folder , it will store the file at agent's temp directory .
-* If the target file already exits in the target folder , action will overwrite the file.
+* If the target file already exists, action will overwrite the file.
 
 =Return Value=
-* UC4RB_NXS_ARCHIVE_PATH : target folder in which artifact will be downloaded.
-* UC4RB_NXS_FILE_NAME:  Filename with the extension.
-
+(none)
 
 = Outputs =
 * Return code is 0 in case of success.
@@ -470,10 +460,9 @@ AE logs will be displayed in the AE report.
 
 = Example =
 - Repository Name*:        			   raw-repo
-- Group*:                                                     /actions	
-- Name*:                                                     Robot
--Target Folder:                                            D:\automic
--Target File*:                                               Actions.zip]]></DOC>
+- Group*:                                          /actions	
+- Name*:                                           Actions
+- Target File*:                                    C:\Automic\Actions.zip]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

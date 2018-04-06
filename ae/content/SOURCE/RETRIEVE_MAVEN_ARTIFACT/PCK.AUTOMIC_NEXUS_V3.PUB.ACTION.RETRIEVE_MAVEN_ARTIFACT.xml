@@ -72,7 +72,6 @@
 <UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_TARGETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
-<UC4RB_NXS_TARGET_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -153,7 +152,6 @@
 <UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_TARGETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
-<UC4RB_NXS_TARGET_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -234,7 +232,6 @@
 <UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_TARGETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
-<UC4RB_NXS_TARGET_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -302,7 +299,6 @@
 <UC4RB_NXS_GROUP_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_GROUP_ID#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_REPOSITORYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_REPOSITORY#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_TARGETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
-<UC4RB_NXS_TARGET_FILEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_TARGET_FILE#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 <UC4RB_NXS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_VERSION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PRV.PROMPTSET.RETRIEVE_MAVEN_ARTIFACT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -399,7 +395,6 @@
 <UC4RB_NXS_EXTENSIONs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_CLASSIFIERs.00 altview="0" haslist="0"/>
 <UC4RB_NXS_TARGETs.00 altview="0" haslist="0"/>
-<UC4RB_NXS_TARGET_FILEs.00 altview="0" haslist="0"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -446,35 +441,31 @@
 PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_MAVEN_ARTIFACT
 
 = General description =
-This action is used to retrieve the artifact from Nexus maven repository using maven parameters i.e group, artifact & version parameters. A user can retrieve an artifact using the login credentials (login and password) or can retrieve anonymously if the user has the rights to do so. Output of this action will be AE variables consisting retrieved archive file path and file name. 
+This action is used to retrieve the artifact from Nexus maven repository using Maven parameters i.e. group, artifact, version parameters. A user can retrieve an artifact using the login credentials (login and password) or can retrieve anonymously if the user has the rights to do so.
 
 Note:
 * Retrieve Maven Artifact Actions require Nexus >= 3.9.0
 
 = Failure Conditions =
 * Wrong connection details like username, password or Nexus URL
-* Specified group ID , Artifact id or Base version details are invalid.
-* Specified target folder path is invalid.
+* Specified group ID, Artifact id or Base version details are invalid.
+* Specified target File path is invalid.
 
 = Inputs =
--Repository Name*:        			            Provide the name of the repository in which you want to upload artifact. E.g. raw-repo
--Group ID*:                                                  Provide group id of the component.E.g. /actions	
--Base Version*:                                            Provide base version of the component.E.g. 1.2
--Artifact ID*:                                                 Provide id of the artifact to be retrieved.E.g. commons-io
--Extension :                                                 Provide extension of the component.E.g. jar
--Classifier :                                                  Provide classifier of the component. E.g. tomcat 
--Target Folder:                                             Provide target folder in which artifact will be downloaded.E.g. D:\automic
--Target File*:                                                Provide target file in which artifact will be downloaded.E.g. Actions.zip
+-Repository Name*:                               Provide the name of the repository from which you want to retrieve artifact. E.g. maven-repo
+-Group ID*:                                      Provide group id of the component. E.g. /actions	
+-Base Version*:                                  Provide the base version of the component. E.g. 1.2
+-Artifact ID*:                                   Provide id of the artifact to be retrieved. E.g. automic
+-Extension:                                      Provide the extension of the component. E.g. jar
+-Classifier:                                     Provide classifier of the component. E.g. tomcat 
+-Target File*:                                   Provide target file name with full path for artifact to be downloaded. E.g. D:\automic\Actions.zip
 
 
 = Behavior =
-* If the user does not provide the target folder , it will store the file at agent's temp directory .
-* If the specified target file already exists in the target folder, action will overwrite the target file.
+* If the specified target file already exists, action will overwrite the target file.
 
 =Return Value=
-* UC4RB_NXS_ARCHIVE_PATH: target folder in which artifact will be downloaded.
-* UC4RB_NXS_TARGET_FILE:  target file in which artifact will be downloaded.
-
+(none)
 
 = Outputs =
 * Return code is 0 in case of success.
@@ -487,14 +478,14 @@ Note:
 AE logs will be displayed in the AE report.
 
 = Example =
-- Repository Name*:        			    raw-repo
-- Group ID*:                                                 /actions	
-- Base Version*:                                           1.2
-- Artifact ID*:                                                commons-io
--Extension                                                   jar
--Classifier                                                    temporary
--Target Folder:                                            D:\automic
--Target File*:                                               Actions.zip]]></DOC>
+- Repository Name*:                                 maven-repo
+- Group ID*:                                        /actions	
+- Base Version*:                                    1.2
+- Artifact ID*:                                     automic
+- Extension                                         jar
+- Classifier                                        temporary
+- Target File*:                                     D:\automic\Actions.zip
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
