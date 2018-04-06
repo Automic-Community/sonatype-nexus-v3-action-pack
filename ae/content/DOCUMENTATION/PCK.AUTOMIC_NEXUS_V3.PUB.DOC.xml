@@ -31,12 +31,12 @@ Sonatype Nexus >= 3.9.0
 * Actions will run on both Windows and Unix agents
 
 =Variables=
-PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:         HTTP timeout parameters can be configured in this variable. Values are defined in milliseconds. 0 means no timeout.
+PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:  HTTP timeout parameters can be configured in this variable. Values are defined in milliseconds. 0 means no timeout.
 
 =Common Inputs=
--Nexus URL*:   Specify URL of your Nexus repository.
+-Nexus URL*:    Specify URL of your Nexus repository.
 -Username:      Specify your Nexus repository username. 
--Password:       Specify your Nexus repository password.
+-Password:      Specify your Nexus repository password.
 
 =Actions=
 Following actions are supported by Nexus.
