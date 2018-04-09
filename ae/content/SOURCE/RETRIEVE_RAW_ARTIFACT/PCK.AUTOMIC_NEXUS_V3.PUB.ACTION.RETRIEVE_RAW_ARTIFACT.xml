@@ -437,10 +437,10 @@ Note:
 * Specified target file path is invalid.
 
 = Inputs =
--Repository Name*:        			           Provide the name of the repository from which you want to retrieve artifact. E.g. raw-repo
--Group*:                                                   Provide the name of the group of the component. E.g. actions
+-Repository Name*:        			         Provide the name of the repository from which you want to retrieve the artifact. E.g. raw-repo
+-Group*:                                                    Provide the name of the group of the component. E.g. actions
 -Name*:                                                    Provide the name of the component. E.g. action-jar
--Target File*:                                             Provide target file name with full path for artifact to be downloaded.E.g. C:\Automic\Actions.zip
+-Target File*:                                             Provide target file name with full path for the artifact to be downloaded.E.g. C:\Automic\Actions.zip
 
 = Behavior =
 * If the target file already exists, action will overwrite the file.
@@ -459,7 +459,7 @@ Note:
 AE logs will be displayed in the AE report.
 
 = Example =
-- Repository Name*:        			   raw-repo
+- Repository Name*:        	         raw-repo
 - Group*:                                          /actions	
 - Name*:                                           Actions
 - Target File*:                                    C:\Automic\Actions.zip]]></DOC>

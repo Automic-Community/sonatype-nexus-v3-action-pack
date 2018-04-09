@@ -452,13 +452,13 @@ Note:
 * Specified target File path is invalid.
 
 = Inputs =
--Repository Name*:                               Provide the name of the repository from which you want to retrieve artifact. E.g. maven-repo
+-Repository Name*:                         Provide the name of the repository from which you want to retrieve the artifact. E.g. maven-repo
 -Group ID*:                                      Provide group id of the component. E.g. /actions	
--Base Version*:                                  Provide the base version of the component. E.g. 1.2
--Artifact ID*:                                   Provide id of the artifact to be retrieved. E.g. automic
+-Base Version*:                               Provide the base version of the component. E.g. 1.2
+-Artifact ID*:                                     Provide id of the artifact to be retrieved. E.g. automic
 -Extension:                                      Provide the extension of the component. E.g. jar
--Classifier:                                     Provide classifier of the component. E.g. tomcat 
--Target File*:                                   Provide target file name with full path for artifact to be downloaded. E.g. D:\automic\Actions.zip
+-Classifier:                                       Provide classifier of the component. E.g. tomcat 
+-Target File*:                                   Provide target file name with full path for the artifact to be downloaded. E.g. D:\automic\Actions.zip
 
 
 = Behavior =
@@ -478,13 +478,13 @@ Note:
 AE logs will be displayed in the AE report.
 
 = Example =
-- Repository Name*:                                 maven-repo
-- Group ID*:                                        /actions	
-- Base Version*:                                    1.2
-- Artifact ID*:                                     automic
-- Extension                                         jar
-- Classifier                                        temporary
-- Target File*:                                     D:\automic\Actions.zip
+- Repository Name*:                       maven-repo
+- Group ID*:                                    /actions	
+- Base Version*:                             1.2
+- Artifact ID*:                                   automic
+- Extension                                     jar
+- Classifier                                      temporary
+- Target File*:                                  D:\automic\Actions.zip
 ]]></DOC>
 </DOCU_Docu>
 </JOBP>

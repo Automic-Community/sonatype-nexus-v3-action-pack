@@ -462,14 +462,14 @@ Note:
 * If file path does not exist.
 
 = Inputs =
-- Repository Name*:        			   Provide name of the repository in which you want to upload artifact. E.g. maven-releases
-- File*:                                           Provide file you want to upload with full path.. E.g. C:\commons-io-2.0.1.jar
+- Repository Name*:        	           Provide name of the repository in which you want to upload artifact. E.g. maven-releases
+- File*:                                                 Provide file you want to upload with full path.. E.g. C:\commons-io-2.0.1.jar
 - Classifier:        			           Specify classifier of the artifact. E.g. dev
 - Extension*:        			           Specify extension of the artifact. E.g. jar 
 - Group ID*:        			           Specify Group ID of the artifact. E.g. org.apache
 - Artifact ID*:        			           Specify Artifact ID. E.g. commons-io
 - Version*:        			           Specify artifact version. E.g. 2.0.1
-- Generate POM:        			           Generates POM, If Yes is Selected. e.g. Yes	  
+- Generate POM:        			   Generates POM, If Yes is Selected. e.g. Yes	  
 - Packaging:        			           Provide packaging details of the POM. E.g. jar
 
 = Behavior =
@@ -489,14 +489,14 @@ Note:
 AE logs will be displayed in the AE report.
 
 = Example =
-- Repository Name*:        			  maven-releases
-- File*:                                          C:\commons-io-2.0.1.jar
+- Repository Name*:                          maven-releases
+- File*:                                                C:\commons-io-2.0.1.jar
 - Classifier:        			          dev
 - Extension*:        			          jar 
 - Group ID*:        			          org.apache
 - Artifact ID*:        			          commons-io
 - Version*:        			          2.0.1
-- Generate POM:        			          Yes	  
+- Generate POM:        			  Yes	  
 - Packaging:        			          jar]]></DOC>
 </DOCU_Docu>
 </JOBP>
