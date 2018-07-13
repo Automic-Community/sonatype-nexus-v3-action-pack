@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArtifactSourceType>
+  <Name>Nexus_V3_Raw</Name>
+  <Properties>
+    <Group name="Connection" displayName="Connection" expand="true">
+	  <Property name="protocol" displayName="Protocol" mode="READONLY" type="SingleLineText">
+        <Defaultvalue>NEXUS_V3_RAW</Defaultvalue>
+      </Property>
+      <Property name="nexus_url" displayName="Nexus URL" mode="MANDATORY" type="SingleLineText">
+		<Description>Specify URL of your Nexus repository. Example http://127.0.0.1:8081/nexus/</Description>
+      </Property>
+      <Property name="username" displayName="Username" mode="EDITABLE" type="SingleLineText">
+        <Description>Specify your Nexus repository username. </Description>
+      </Property>
+      <Property name="password" displayName="Password" mode="EDITABLE" type="Protected">
+        <Description>Specify your Nexus repository password.</Description>
+      </Property>
+    </Group>
+  </Properties>
+  <Description>Transfer artifact via Nexus</Description>
+  <Artifact>
+    <Properties>
+      <Group name="ArtifactInfo" displayName="Artifact Information" expand="true">
+			<Property name="repository" displayName="Repository" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify the nexus repository.</Description>
+			</Property>
+			<Property name="group" displayName="Group" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify Component Group of the artifact.</Description>
+			</Property>
+			<Property name="name" displayName="Name" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify Component Name of the artifact.</Description>
+			</Property>
+			<Property name="archive_type" displayName="Archive Type" mode="EDITABLE" type="SingleChoice">
+			  <List>zip#;#tar#;#tar.gz</List>
+			</Property>
+		</Group>
+    </Properties>
+  </Artifact>
+</ArtifactSourceType>
