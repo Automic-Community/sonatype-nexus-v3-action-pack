@@ -31,6 +31,8 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	private static final String TARGET_FOLDER = "target";
 	private static final String CLASSIFIER = "classifier";
 	private static final String EXTENSION = "extension";
+	private static final String PATH = "path";
+	
 
 	private String repository;
 	private String groupid;
@@ -39,6 +41,8 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 	private String targetFolder;
 	private String fileclassifier;
 	private String fileExtension;
+	private String path;
+	
 
 	public RetrieveMavenArtifactAction() {
 		addOption(RAW_REPO, true, "Repository Name");
@@ -48,6 +52,7 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		addOption(TARGET_FOLDER, true, "Target Folder");
 		addOption(CLASSIFIER, false, "classifier");
 		addOption(EXTENSION, false, "extension");
+		addOption(PATH, false, "path");
 	}
 
 	/**
@@ -68,6 +73,7 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		NexusValidator.checkNotEmpty(targetFolder, "Target Folder");
 		fileclassifier = getOptionValue(CLASSIFIER);
 		fileExtension = getOptionValue(EXTENSION);
+		path=getOptionValue(PATH);
 
 	}
 
@@ -93,6 +99,13 @@ public class RetrieveMavenArtifactAction extends AbstractHttpAction {
 		if (CommonUtil.checkNotEmpty(fileclassifier)) {
 			webResource = webResource.queryParam("maven.classifier", fileclassifier);
 		}
+		
+		if (CommonUtil.checkNotEmpty(path)) {
+			path="\""+path+"\"";
+			webResource = webResource.queryParam("q", path );
+		}
+		
+		
 
 		ConsoleWriter.writeln("Calling url " + webResource.getURI());
 		response = webResource.get(ClientResponse.class);
