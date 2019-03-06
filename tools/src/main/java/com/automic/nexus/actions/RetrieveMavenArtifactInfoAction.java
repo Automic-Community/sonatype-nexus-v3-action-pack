@@ -32,6 +32,7 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 	private static final String EXTENSION = "extension";
 	private static final String DOWNLOAD_CHECKSUM = "downloadchecksum";
 	private static final String CHECKSUM_TYPE = "checksumtype";
+	private static final String PATH = "path";
 
 	private String repository;
 	private String groupid;
@@ -43,6 +44,7 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 	
 	private String downloadChecksum;
 	private String checksumType;
+	private String path;
 
 	public RetrieveMavenArtifactInfoAction() {
 		addOption(RAW_REPO, true, "Repository Name");
@@ -55,6 +57,7 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 		
 		addOption(DOWNLOAD_CHECKSUM, true, "Download and record checksum of downloaded file");
 		addOption(CHECKSUM_TYPE, false, "Select Sha1 or Md5");
+		addOption(PATH, false, "path");
 	}
 
 	/**
@@ -78,6 +81,7 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 		downloadChecksum = getOptionValue(DOWNLOAD_CHECKSUM);
         NexusValidator.checkNotEmpty(downloadChecksum, "Download Checksum");
         checksumType = getOptionValue(CHECKSUM_TYPE);
+        path=getOptionValue(PATH);
 
 	}
 
@@ -102,6 +106,11 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 
 		if (CommonUtil.checkNotEmpty(fileclassifier)) {
 			webResource = webResource.queryParam("maven.classifier", fileclassifier);
+		}
+		
+		if (CommonUtil.checkNotEmpty(path)) {
+			path="\""+path+"\"";
+			webResource = webResource.queryParam("q", path );
 		}
 
 		ConsoleWriter.writeln("Calling url " + webResource.getURI());
