@@ -39,6 +39,9 @@
 			<Property name="artifact_classifier" displayName="Artifact Classifier" mode="EDITABLE" type="SingleLineText">
 			  <Description>Specify classifier of the artifact.</Description>
 			</Property>
+			<Property name="artifact_path" displayName="Artifact Path" mode="EDITABLE" type="SingleLineText">
+			  <Description>Specify path of the artifact.</Description>
+			</Property>
 			<Property name="artifact_extension" displayName="Artifact Extension" mode="EDITABLE" type="SingleLineText">
 			  <Description>Specify extension of the artifact.</Description>
 			</Property>
