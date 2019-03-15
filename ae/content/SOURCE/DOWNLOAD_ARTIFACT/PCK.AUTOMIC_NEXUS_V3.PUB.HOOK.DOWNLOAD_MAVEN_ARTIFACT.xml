@@ -57,7 +57,7 @@
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
-<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
 </PRPTBOX>
@@ -150,7 +150,7 @@
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
-<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
 </PRPTBOX>
@@ -251,7 +251,7 @@
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
-<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
 </PRPTBOX>
@@ -392,7 +392,7 @@
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
-<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
 </PRPTBOX>
@@ -456,7 +456,7 @@
 </PreCon>
 </preconditions>
 <predecessors>
-<pre BranchType="0" Lnr="1" PreLnr="4" When="" type="container"/>
+<pre BranchType="0" Lnr="1" PreLnr="4" When="ANY_OK" type="container"/>
 </predecessors>
 <runtime MrtCancel="0" MrtDays="0" MrtErt="0" MrtExecute="0" MrtExecuteObj="" MrtFix="0" MrtMethodDate="0" MrtMethodErt="0" MrtMethodFix="0" MrtMethodNone="1" MrtOn="1" MrtTZ="" MrtTime="00:00" SrtErt="0" SrtFix="0" SrtMethodErt="0" SrtMethodFix="0" SrtMethodNone="1"/>
 <result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
@@ -466,7 +466,7 @@
 <PROMPTSET name="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">
 <UC4RB_NXS_BASE_URLs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_BASE_URL#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
-<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_PASSWORD#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_SSL_VALIDATION#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 <UC4RB_NXS_USERNAMEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_NXS_USERNAME#" promptsetname="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
 </PRPTBOX>
@@ -573,7 +573,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_NEXUS_V3.PUB.PROMPTSET.NEXUS_CONNECTION" prptmode="1">
 <UC4RB_NXS_BASE_URLs.00 altview="1" haslist="0">EXT:@artifact_source/custom/nexus_url</UC4RB_NXS_BASE_URLs.00>
 <UC4RB_NXS_USERNAMEs.00 altview="1" haslist="0">EXT:@artifact_source/custom/username</UC4RB_NXS_USERNAMEs.00>
-<UC4RB_NXS_PASSWORDs.00 altview="1" haslist="0">EXT:@artifact_source/custom/password</UC4RB_NXS_PASSWORDs.00>
+<UC4RB_NXS_PASSWORDs.00 altview="1" haslist="0">--10EE37B11CDDADFDBE3966ED3B8B97A9F968EE12AB83A80B4E139F8936BC5D6DC1992A49D118ABFD30</UC4RB_NXS_PASSWORDs.00>
 <UC4RB_NXS_SSL_VALIDATIONs.00 altview="0" haslist="0">NO</UC4RB_NXS_SSL_VALIDATIONs.00>
 </PRPTBOX>
 </PROMPTSET>
