@@ -79,7 +79,7 @@ public class RetrieveRawArtifactInfoAction extends AbstractHttpAction {
 		WebResource webResource = getClient();
 		ClientResponse response = null;
 
-		webResource = webResource.path("service").path("rest").path("beta").path("search").path("assets")
+		webResource = webResource.path("service").path("rest").path(apiVersion).path("search").path("assets")
 				.queryParam("repository", repository).queryParam("group", artifactgroup)
 				.queryParam("name", artifactname);
 
