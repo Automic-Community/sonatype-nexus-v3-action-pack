@@ -52,10 +52,16 @@ public abstract class AbstractHttpAction extends AbstractAction {
 	 */
 	private boolean isAnonymous;
 
+	/**
+	 * End point api version
+	 */
+	protected String apiVersion;
+	
 	public AbstractHttpAction() {
 		addOption(Constants.BASE_URL, true, "Base URL of Nexus");
 		addOption(Constants.NEXUS_USERNAME, false, "Username for Nexus Authentication");
 		addOption(Constants.SKIP_CERT_VALIDATION, false, "Skip SSL validation");
+		addOption(Constants.API_VERSION, true, "API Version");
 	}
 
 	/**
@@ -100,7 +106,9 @@ public abstract class AbstractHttpAction extends AbstractAction {
 			String msg = String.format(ExceptionConstants.INVALID_INPUT_PARAMETER, "URL", temp);
 			throw new AutomicException(msg);
 		}
-	}
+		apiVersion = getOptionValue(Constants.API_VERSION);
+        NexusValidator.checkNotEmpty(apiVersion, "API Version");
+   }
 
 	/**
 	 * Method to execute the action.

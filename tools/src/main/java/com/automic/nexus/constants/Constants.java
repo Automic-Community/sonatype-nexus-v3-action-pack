@@ -28,6 +28,7 @@ public final class Constants {
     public static final String BASE_URL = "baseurl";
     public static final String NEXUS_USERNAME = "username";
     public static final String SKIP_CERT_VALIDATION = "ssl";
+    public static final String API_VERSION = "apiversion";
     public static final String HTTPS = "https";
 
     public static final String YES = "YES";
