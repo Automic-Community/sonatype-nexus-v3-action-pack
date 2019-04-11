@@ -30,6 +30,8 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
 	private static final String FILE = "filepath";
 	private static final String GEN_POM = "generatepom";
 	private static final String GENERATE_POM = "Generate POM";
+	private static final String API_VERSION = "apiversion";
+	
 	
     private String groupID;
     private String artifactID;
@@ -40,6 +42,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
     private String extension;
     private File filePath;
     private Boolean generatePOM = false;
+    private String apiVersion;
 
     public UploadMavenArtifactAction() {
         addOption(GROUP_ID, true, "Group ID");
@@ -51,6 +54,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
         addOption(MVN_EXTENSION, true, "Extension");
         addOption(FILE, true, "File");
         addOption(GEN_POM, true, GENERATE_POM);
+        addOption(API_VERSION, true, "API Version");
 
     }
 
@@ -89,13 +93,16 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
                     "Value of  Generate POM  can only be Yes or No.");
             generatePOM = CommonUtil.convert2Bool(gntPom);
             
+            apiVersion = getOptionValue(API_VERSION);
+            NexusValidator.checkNotEmpty(apiVersion, "API Version");
+            
     }
 
     @Override
     protected void executeSpecific() throws AutomicException {
         prepareInputParameters();
         WebResource webResource = getClient();
-        webResource = webResource.queryParam("repository", repository).path("service").path("rest").path("beta").path("components");
+        webResource = webResource.queryParam("repository", repository).path("service").path("rest").path(apiVersion).path("components");
 
         FileDataBodyPart fp = new FileDataBodyPart("maven2.asset1", filePath, MediaType.APPLICATION_OCTET_STREAM_TYPE);
 
