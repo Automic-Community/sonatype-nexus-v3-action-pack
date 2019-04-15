@@ -66,7 +66,7 @@ public class UploadRawArtifactAction extends AbstractHttpAction {
 	protected void executeSpecific() throws AutomicException {
 		prepareInputParameters();
 		WebResource webResource = getClient();
-		webResource = webResource.queryParam(RAW_REPO, repository).path("service").path("rest").path("beta").path("components");
+		webResource = webResource.queryParam(RAW_REPO, repository).path("service").path("rest").path(apiVersion).path("components");
         
 		FileDataBodyPart fp = new FileDataBodyPart("raw.assetN", filePath, MediaType.APPLICATION_OCTET_STREAM_TYPE);
 

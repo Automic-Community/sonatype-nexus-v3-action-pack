@@ -96,7 +96,7 @@ public class RetrieveMavenArtifactInfoAction extends AbstractHttpAction {
 		WebResource webResource = getClient();
 		ClientResponse response = null;
 
-		webResource = webResource.path("service").path("rest").path("beta").path("search").path("assets").queryParam("repository", repository)
+		webResource = webResource.path("service").path("rest").path(apiVersion).path("search").path("assets").queryParam("repository", repository)
                 .queryParam("maven.groupId", groupid).queryParam("maven.baseVersion", baseversion)
                 .queryParam("maven.artifactId", artifactid);
 

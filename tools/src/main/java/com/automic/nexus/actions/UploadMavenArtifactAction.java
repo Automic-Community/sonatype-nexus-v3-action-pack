@@ -31,6 +31,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
 	private static final String GEN_POM = "generatepom";
 	private static final String GENERATE_POM = "Generate POM";
 	
+	
     private String groupID;
     private String artifactID;
     private String version;
@@ -51,7 +52,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
         addOption(MVN_EXTENSION, true, "Extension");
         addOption(FILE, true, "File");
         addOption(GEN_POM, true, GENERATE_POM);
-
+    
     }
 
     /**
@@ -95,7 +96,7 @@ public class UploadMavenArtifactAction extends AbstractHttpAction {
     protected void executeSpecific() throws AutomicException {
         prepareInputParameters();
         WebResource webResource = getClient();
-        webResource = webResource.queryParam("repository", repository).path("service").path("rest").path("beta").path("components");
+        webResource = webResource.queryParam("repository", repository).path("service").path("rest").path(apiVersion).path("components");
 
         FileDataBodyPart fp = new FileDataBodyPart("maven2.asset1", filePath, MediaType.APPLICATION_OCTET_STREAM_TYPE);
 
