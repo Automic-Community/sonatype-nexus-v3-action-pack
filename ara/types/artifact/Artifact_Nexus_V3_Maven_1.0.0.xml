@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArtifactSourceType>
+  <Name>Nexus_V3_Maven</Name>
+  <Properties>
+    <Group name="Connection" displayName="Connection" expand="true">
+	  <Property name="protocol" displayName="Protocol" mode="READONLY" type="SingleLineText">
+        <Defaultvalue>NEXUS_V3_MAVEN</Defaultvalue>
+      </Property>
+      <Property name="nexus_url" displayName="Nexus URL" mode="MANDATORY" type="SingleLineText">
+		<Description>Specify URL of your Nexus repository. Example http://127.0.0.1:8081/nexus/</Description>
+      </Property>
+      <Property name="username" displayName="Username" mode="EDITABLE" type="SingleLineText">
+        <Description>Specify your Nexus repository username. </Description>
+      </Property>
+      <Property name="password" displayName="Password" mode="EDITABLE" type="Protected">
+        <Description>Specify your Nexus repository password.</Description>
+      </Property>
+    </Group>
+  </Properties>
+  <Description>Transfer artifact via Nexus</Description>
+  <Artifact>
+    <Properties>
+      <Group name="ArtifactInfo" displayName="Artifact Information" expand="true">
+		  <Property name="group_id" displayName="Group ID" mode="MANDATORY" type="SingleLineText">
+			<Description>Specify Group ID of the artifact.</Description>
+			</Property>
+			<Property name="artifact_id" displayName="Artifact ID" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify Artifact ID.</Description>
+			</Property>
+			<Property name="version" displayName="Version" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify Artifact Version.</Description>
+			</Property>
+			<Property name="repository" displayName="Repository" mode="MANDATORY" type="SingleLineText">
+			  <Description>Specify the nexus repository.</Description>
+			</Property>
+			<Property name="packaging_type" displayName="Packaging Type" mode="EDITABLE" type="SingleLineText">
+			  <Description>Specify packaging type of the artifact.</Description>
+			</Property>
+			<Property name="artifact_classifier" displayName="Artifact Classifier" mode="EDITABLE" type="SingleLineText">
+			  <Description>Specify classifier of the artifact.</Description>
+			</Property>
+			<Property name="artifact_path" displayName="Artifact Path" mode="EDITABLE" type="SingleLineText">
+			  <Description>Specify path of the artifact.</Description>
+			</Property>
+			<Property name="artifact_extension" displayName="Artifact Extension" mode="EDITABLE" type="SingleLineText">
+			  <Description>Specify extension of the artifact.</Description>
+			</Property>
+			<Property name="archive_type" displayName="Archive Type" mode="EDITABLE" type="SingleChoice">
+			  <List>zip#;#tar#;#tar.gz</List>
+			</Property>
+		</Group>
+    </Properties>
+  </Artifact>
+</ArtifactSourceType>

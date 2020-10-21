@@ -1,0 +1,26 @@
+# Package Build Configuration 
+name: PCK.AUTOMIC_NEXUS_V3
+
+APPDATA: ae/APPDATA
+source: ae/content
+  
+# binary object resource mapping will be defined here
+binaries:
+  
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_NEXUS_V3.PRV.STORE
+    resources: 
+      - name: NEXUSTOOL
+        type: BINARY
+        path: tools/target/nexusv3-tool.jar
+        version: 1.0.0
+  - object: RESOURCES/PCK.AUTOMIC_NEXUS_V3.PRV.CUSTOM_TYPES
+    timestamp: disabled
+    resources:
+      - name: ARTIFACTSOURCE#NEXUS_V3_MAVEN
+        type: TEXT
+        path: ara/types/artifact/Artifact_Nexus_V3_Maven_1.0.0.xml
+        version: 1.0.0
+      - name: ARTIFACTSOURCE#NEXUS_V3_RAW
+        type: TEXT
+        path: ara/types/artifact/Artifact_Nexus_V3_Raw_1.0.0.xml
+        version: 1.0.0

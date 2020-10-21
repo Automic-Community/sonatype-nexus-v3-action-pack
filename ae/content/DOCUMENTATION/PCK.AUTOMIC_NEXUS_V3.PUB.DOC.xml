@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_NEXUS_V3.PUB.DOC">
+<HEADER state="1">
+<Title>Package Documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About Automic's NEXUS Package
+================================
+Nexus is a repository manager. It allows to the proxy, collect, and manage software dependencies and makes it easy to distribute implemented software. With this package we automate the Sonatype Nexus services for the artifact that achieve the given business goal:
+* Upload Raw Artifact
+* Upload Maven Artifact
+* Retrieve Maven Artifact
+* Retrieve Raw Artifact 
+
+=Supported Nexus versions=
+Sonatype Nexus >= 3.9.0
+
+=Limitations=
+(none)
+
+=Setup=
+* Oracle JDK 1.7 or higher must be installed on Agent OS and "java" must be set as executable on the same.
+* The Agent should be able to access the Nexus URL(s) in order to make HTTP requests.
+* Modify the HTTP timeout parameters as per your environment. By default "CONNECTION_TIMEOUT" is defined as 30000 and "READ_TIMEOUT" is defined as 60000. Both are defined in milliseconds. 0 means no timeout.
+* Use ITPA shared dependency as 1.1.2 or later.
+
+=Implementation Guide=
+* Actions will run on both Windows and Unix agents
+
+=Variables=
+PCK.AUTOMIC_NEXUS_V3.PUB.VARA.PACKAGE_PARAMETERS:  HTTP timeout parameters can be configured in this variable. Values are defined in milliseconds. 0 means no timeout.
+PCK.AUTOMIC_NEXUS_V3.PUB.VARA.API_VERSION:API Version can be configured in this variable. Currently, it is set to latest API version v1.
+
+=Common Inputs=
+-Nexus URL*:       Specify URL of your Nexus repository.
+-Username:         Specify your Nexus repository username. 
+-Password:         Specify your Nexus repository password.
+-API Version:      Specify version of Nexus API endpoint.
+
+=Actions=
+Following actions are supported by Nexus.
+* Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_RAW_ARTIFACT
+* Action Description: This action uploads content to nexus Raw repository.
+
+* Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.UPLOAD_MAVEN_ARTIFACT
+* Action Description: This action uploads content to nexus Maven repository.
+
+* Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_MAVEN_ARTIFACT
+* Action Description: This action retrieve contents from nexus Maven repository.
+
+*Action Name: PCK.AUTOMIC_NEXUS_V3.PUB.ACTION.RETRIEVE_RAW_ARTIFACT
+* Action Description: This action retrieves artifact from nexus Raw repository.
+
+]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>

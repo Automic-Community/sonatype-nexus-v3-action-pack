@@ -1,0 +1,26 @@
+*** Settings ***
+Resource          ../../../Env/default.txt
+
+*** Variables ***
+#---- Promptset Fields --------------------------------------------------------------------------------------
+${URL_Nexus}      http://10.243.44.110:8888
+${UserName_Nexus}    admin
+${Password_Nexus}    Password
+${Respository_Name}    maven-snapshots
+${Maven_Respository_Name}    maven-snapshots
+${Upload_Artifact}    ${EXECDIR}\\test.jar
+#----Upload Raw Artifact-------------------------------------------------------------------------------------
+${Dir}            /automic/test
+#----Upload Maven Artifact-----------------------------------------------------------------------------------
+${Maven_Classifier}    robot
+${Maven_Extension}    jar
+${Group_ID}       groupID
+${Artifact_ID}    artifactID
+${Artifact_Version}    1.0.0
+#----Retrieve Raw Artifact-----------------------------------------------------------------------------------
+${Group}          /actions
+${Name}           actions/actions-jar
+${File_Name}      /home/automic/agents/SwatiAgent/Artifacts/action.jar
+#----Retrieve Maven Artifact-----------------------------------------------------------------------------------
+${Base_Version}    1.0-SNAPSHOT
+${Path}           groupID/artifactID/1.0-SNAPSHOT/artifactID-1.0-20190301.064646-2.jar
